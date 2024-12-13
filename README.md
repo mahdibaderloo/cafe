@@ -8,7 +8,9 @@
 
 > This site is used for Cafe Liilo orders ☕
 >
-> Check this [URL](https://mahdibaderloo.github.io/mobile-store/) to see this repo ❤️
+> Check this [URL](https://mahdibaderloo.github.io/cafe/) to see this repo ❤️
+
+desktop size soon...
 
 <br>
 
