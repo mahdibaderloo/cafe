@@ -362,7 +362,6 @@ body {
     border-radius: 10px;
     border: 1px solid #351f08;
     box-shadow: 0 0 1px #351f08;
-    cursor: pointer;
 }
 
 .category-img {
@@ -475,6 +474,7 @@ body {
 }
 
 .lines {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

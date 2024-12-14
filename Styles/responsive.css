@@ -1,4 +1,8 @@
 @media screen and (min-width: 320px) {
+
+    input, textarea, button, select, a {
+        -webkit-tap-highlight-color: transparent;
+    }
     
 }
 
@@ -134,11 +138,117 @@
 }
 
 @media screen and (min-width: 768px) {
+    .bubble-tea-pic {
+        width: 200px;
+    }
+    .main-title {
+        font-size: 80px;
+    }
+    .coffee-lines {
+        margin: 6rem 20px;
+    }
+    .lines {
+        width: 100%;
+        gap: 16px;
+    }
+    .line {
+        height: 72px;
+        width: 200px;
+    }
+    .line-link {
+        text-align: center;
+        line-height: 72px;
+        font-weight: bold;
+        font-size: 32px;
+        width: 100%;
+    }
+    .category-text {
+        margin-top: 3rem;
+        font-size: 32px;
+    }
+    .categories {
+        height: 250px;
+    }
+    .category {
+        height: 100%;
+    }
+    .category-img {
+        width: 160px;
+        height: 160px;
+    }
+    .category-title {
+        width: 160px;
+        font-size: 24px;
+        height: 88px;
+        line-height: 88px;
+    }
+    .lines {
+        margin-bottom: 20rem;
+    }
+    .items {
+        margin-top: 3rem;
+    }
+    .item {
+        padding: 24px;
+        margin-bottom: 2rem;
+    }
+    .item__content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .item-title {
+        font-size: 36px;
+    }
+    .item-desc {
+        font-size: 24px;
+    }
+    .item-price {
+        font-size: 40px;
+    }
+    .item-btn {
+        font-size: 28px;
+        width: 280px;
+        height: 80px;
+    }
+    .footer__logo-box {
+        height: 300px;
+    }
+    .footer__logo {
+        width: 80%;
+    }
+    .footer__connect-link {
+        height: 130px;
+        width: 130px;
+    }
+    .footer__connect-gif {
+        height: 85px;
+        width: 85px;
+    }
+    .footer__connect-title {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .copy-right {
+        font-size: 20px;
+        margin-top: 8rem;
+    }
+
 }
 
 
 @media screen and (min-width: 1024px) {
-    
+    .items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .item {
+        width: 49%;
+    }
 }
 
 
@@ -151,7 +261,7 @@
         gap: 40px;
     }
     .icon {
-        font-size: 50px;
+        font-size: 60px;
     }
     .header__left-logo-box {
         width: 120px;
@@ -161,5 +271,5 @@
 
 
 @media screen and (min-width: 1680px) {
-    
+
 }
