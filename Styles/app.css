@@ -622,3 +622,8 @@ body {
 
 .copy-right-text {
 }
+
+.dashboard-btn {
+  text-decoration: none;
+  color: inherit;
+}
