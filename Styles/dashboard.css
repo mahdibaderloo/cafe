@@ -179,6 +179,7 @@ body {
   right: -60%;
   box-shadow: 0 0 5px #747474;
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo {

@@ -6,7 +6,6 @@ menuIcon.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (e) => {
-  console.log(e.target.className);
   if (
     e.target.className !== "menu" &&
     e.target.className !== "logo" &&
