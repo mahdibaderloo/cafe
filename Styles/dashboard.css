@@ -55,29 +55,103 @@ body {
 }
 
 .dashboard-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .sales {
+  background-color: var(--coffee-color);
+  box-shadow: 0 0 5px #c2c2c2;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.sales-icon-box {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
 .icon {
-  width: 20px;
+  width: 24px;
 }
 
 .sales-volume-wrapper {
+  margin-top: 1rem;
+  color: var(--main-color);
 }
 
 .sales-title {
 }
 
 .sales-volume {
+  margin-top: 0.5em;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .chart-box {
-  width: 70%;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px #c2c2c2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myChart {
+  font-family: var(--font);
+}
+
+.transactions-box {
+}
+
+.transactions-title-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.transactions-icon {
+}
+
+.transactions-title {
+  font-weight: bold;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  height: 260px;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+.transaction {
+  background-color: #fff;
+  box-shadow: 0 0 2px #c2c2c2;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transaction-value {
 }
 
 .products-secsion {
@@ -95,6 +169,7 @@ body {
   right: 0;
   box-shadow: 0 0 5px #000;
   background-color: #fff;
+  display: none;
 }
 
 .logo {
@@ -114,6 +189,7 @@ body {
 .menu-item {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 5px;
   color: var(--coffee-color);
 }

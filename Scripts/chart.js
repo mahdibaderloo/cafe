@@ -27,9 +27,47 @@ new Chart(ctx, {
     ],
   },
   options: {
+    plugins: {
+      legend: {
+        display: false,
+        labels: {
+          font: {
+            family: "BalooBhaijaan2",
+            size: 14,
+          },
+        },
+      },
+      tooltip: {
+        bodyFont: {
+          family: "BalooBhaijaan2",
+        },
+        titleFont: {
+          family: "BalooBhaijaan2",
+        },
+      },
+    },
     scales: {
+      x: {
+        ticks: {
+          font: {
+            family: "BalooBhaijaan2",
+          },
+        },
+      },
       y: {
         beginAtZero: true,
+        title: {
+          font: {
+            family: "BalooBhaijaan2",
+            size: 16,
+            weight: "bold",
+          },
+        },
+        ticks: {
+          font: {
+            family: "BalooBhaijaan2",
+          },
+        },
       },
     },
   },
