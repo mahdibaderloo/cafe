@@ -1,3 +1,4 @@
+const headerTitle = document.querySelector(".header-title");
 const menu = document.querySelector(".menu-section");
 const menuIcon = document.querySelector(".menu-icon");
 const menuItem = document.querySelectorAll(".menu-item");
@@ -17,16 +18,19 @@ menuItem.forEach((item) => {
         dashboardSection.style.display = "flex";
         productsSection.style.display = "none";
         profileSection.style.display = "none";
+        headerTitle.innerHTML = "داشبورد";
         break;
       case "products-btn":
         dashboardSection.style.display = "none";
         productsSection.style.display = "flex";
         profileSection.style.display = "none";
+        headerTitle.innerHTML = "محصولات";
         break;
       case "profile-btn":
         dashboardSection.style.display = "none";
         productsSection.style.display = "none";
         profileSection.style.display = "flex";
+        headerTitle.innerHTML = "پروفایل";
         break;
     }
   });
