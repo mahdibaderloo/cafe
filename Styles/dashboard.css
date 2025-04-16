@@ -166,7 +166,10 @@ body {
 .transaction-value {
 }
 
-.products-secsion {
+.products-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .search-box {
@@ -183,6 +186,31 @@ body {
   border: none;
   font-family: var(--font);
   outline: none;
+}
+
+.categories-box {
+}
+
+.categories-title {
+  margin-bottom: 1rem;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #3f27011e;
 }
 
 .profile-section {
