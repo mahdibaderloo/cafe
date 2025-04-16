@@ -169,6 +169,22 @@ body {
 .products-secsion {
 }
 
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--coffee-color);
+  padding: 10px;
+}
+
+.search-input {
+  border: none;
+  font-family: var(--font);
+  outline: none;
+}
+
 .profile-section {
 }
 
