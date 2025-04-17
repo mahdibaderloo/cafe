@@ -29,6 +29,8 @@ const ProductsSection = document.querySelector(".products-section");
 const ProductsWrapper = document.querySelector(".products");
 const linesSection = document.querySelector(".lines-section");
 const lines = document.querySelectorAll(".line-link");
+const teaGlassesSection = document.querySelector(".tea-glasses-section");
+const glasses = document.querySelectorAll(".glass");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -138,7 +140,22 @@ function selectLine(data) {
 }
 
 function selectTeaGlass(data) {
-  console.log(data);
+  teaGlassesSection.style.display = "flex";
+
+  glasses.forEach((glass) => {
+    glass.addEventListener("click", (e) => {
+      e.preventDefault();
+      switch (e.target.dataset.line) {
+        case "tea-1":
+          generateItems(tea_1);
+          break;
+        case "tea-2":
+          generateItems(tea_2);
+          break;
+      }
+      teaGlassesSection.style.display = "none";
+    });
+  });
 }
 
 function generateItems(items) {

@@ -322,7 +322,7 @@ body {
 }
 
 .tea-glasses-section {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
