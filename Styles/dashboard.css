@@ -6,7 +6,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 10px */
 }
 
 *,
@@ -272,6 +271,50 @@ body {
 }
 
 .product-price {
+}
+
+.lines-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+  background-color: #3f27011e;
+  color: #000;
+  height: 45px;
+  width: 120px;
+  border-radius: 10px;
+  gap: 2px;
+}
+
+.active {
+  background-color: #3f2701;
+  color: var(--main-color);
+}
+
+.line-link {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .profile-section {
