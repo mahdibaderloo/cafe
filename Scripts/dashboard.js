@@ -41,36 +41,36 @@ menuItem.forEach((item) => {
     let route = "/";
     switch (e.target.parentElement.id) {
       case "dashboard-btn":
-        route = "/dashboard";
+        route = "#/dashboard";
         break;
       case "products-btn":
-        route = "/products";
+        route = "#/products";
 
         break;
       case "profile-btn":
-        route = "/profile";
+        route = "#/profile";
         break;
     }
-    history.pushState({}, "", route);
+    location.hash = route;
     navigateTo(route);
   });
 });
 
 function navigateTo(route) {
   switch (route) {
-    case "/dashboard":
+    case "#/dashboard":
       dashboardSection.style.display = "flex";
       CategoriesSection.style.display = "none";
       profileSection.style.display = "none";
       headerTitle.innerHTML = "داشبورد";
       break;
-    case "/products":
+    case "#/products":
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "flex";
       profileSection.style.display = "none";
       headerTitle.innerHTML = "محصولات";
       break;
-    case "/profile":
+    case "#/profile":
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "none";
       profileSection.style.display = "flex";
@@ -218,16 +218,12 @@ window.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("popstate", () => {
-  navigateTo(location.pathname);
-});
-
-window.addEventListener("popstate", () => {
-  navigateTo(location.pathname);
-});
-
 window.addEventListener("load", () => {
-  navigateTo("/dashboard");
+  navigateTo(location.hash || "#/dashboard");
+});
+
+window.addEventListener("hashchange", () => {
+  navigateTo(location.hash);
 });
 
 window.backToCategories = backToCategories;
