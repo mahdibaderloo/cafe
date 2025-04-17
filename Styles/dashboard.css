@@ -223,7 +223,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
 }
 
 .products-header p {

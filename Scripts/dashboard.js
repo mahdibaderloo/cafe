@@ -62,10 +62,26 @@ categories.forEach((category) => {
   category.addEventListener("click", (e) => {
     switch (e.target.dataset.item) {
       case "cold-drink":
-        CategoriesSection.style.display = "none";
-        ProductsSection.style.display = "block";
         generateItems(cold);
+        break;
+      case "hot-drink":
+        generateItems(hot);
+        break;
+      case "shake":
+        generateItems(shake);
+        break;
+      case "cake":
+        generateItems(cake);
+        break;
+      case "snack":
+        generateItems(snack);
+        break;
+      case "bubble-tea":
+        generateItems(bubbleTea);
+        break;
     }
+    CategoriesSection.style.display = "none";
+    ProductsSection.style.display = "block";
   });
 });
 
