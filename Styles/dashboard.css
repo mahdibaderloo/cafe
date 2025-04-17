@@ -216,6 +216,31 @@ body {
 .products-section {
 }
 
+.products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.products-header p {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.back-to-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--coffee-color);
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.back-icon {
+  width: 32px;
+}
+
 .products {
   display: flex;
   flex-direction: column;
@@ -227,6 +252,8 @@ body {
   align-items: center;
   gap: 1rem;
   border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+  background-color: #3f27011e;
   padding: 6px;
   border-radius: 12px;
 }
