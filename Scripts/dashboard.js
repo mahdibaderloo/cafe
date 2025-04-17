@@ -70,6 +70,7 @@ categories.forEach((category) => {
 });
 
 function generateItems(items) {
+  ProductsWrapper.innerHTML = "";
   items.forEach((item) => {
     ProductsWrapper.insertAdjacentHTML(
       "beforeend",
@@ -88,7 +89,10 @@ function generateItems(items) {
   });
 }
 
-function productsElement() {}
+function backToCategories() {
+  ProductsSection.style.display = "none";
+  CategoriesSection.style.display = "flex";
+}
 
 window.addEventListener("click", (e) => {
   if (
@@ -100,3 +104,5 @@ window.addEventListener("click", (e) => {
     menu.style.right = "-60%";
   }
 });
+
+window.backToCategories = backToCategories;
