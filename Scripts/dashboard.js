@@ -38,28 +38,51 @@ menuIcon.addEventListener("click", () => {
 
 menuItem.forEach((item) => {
   item.addEventListener("click", (e) => {
+    let route = "/";
     switch (e.target.parentElement.id) {
       case "dashboard-btn":
-        dashboardSection.style.display = "flex";
-        CategoriesSection.style.display = "none";
-        profileSection.style.display = "none";
-        headerTitle.innerHTML = "داشبورد";
+        route = "/dashboard";
         break;
       case "products-btn":
-        dashboardSection.style.display = "none";
-        CategoriesSection.style.display = "flex";
-        profileSection.style.display = "none";
-        headerTitle.innerHTML = "محصولات";
+        route = "/products";
+
         break;
       case "profile-btn":
-        dashboardSection.style.display = "none";
-        CategoriesSection.style.display = "none";
-        profileSection.style.display = "flex";
-        headerTitle.innerHTML = "پروفایل";
+        route = "/profile";
         break;
     }
+    history.pushState({}, "", route);
+    navigateTo(route);
   });
 });
+
+function navigateTo(route) {
+  switch (route) {
+    case "/dashboard":
+      dashboardSection.style.display = "flex";
+      CategoriesSection.style.display = "none";
+      profileSection.style.display = "none";
+      headerTitle.innerHTML = "داشبورد";
+      break;
+    case "/products":
+      dashboardSection.style.display = "none";
+      CategoriesSection.style.display = "flex";
+      profileSection.style.display = "none";
+      headerTitle.innerHTML = "محصولات";
+      break;
+    case "/profile":
+      dashboardSection.style.display = "none";
+      CategoriesSection.style.display = "none";
+      profileSection.style.display = "flex";
+      headerTitle.innerHTML = "پروفایل";
+      break;
+    default:
+      dashboardSection.style.display = "flex";
+      CategoriesSection.style.display = "none";
+      profileSection.style.display = "none";
+      headerTitle.innerHTML = "داشبورد";
+  }
+}
 
 categories.forEach((category) => {
   category.addEventListener("click", (e) => {
@@ -193,6 +216,18 @@ window.addEventListener("click", (e) => {
   ) {
     menu.style.right = "-60%";
   }
+});
+
+window.addEventListener("popstate", () => {
+  navigateTo(location.pathname);
+});
+
+window.addEventListener("popstate", () => {
+  navigateTo(location.pathname);
+});
+
+window.addEventListener("load", () => {
+  navigateTo("/dashboard");
 });
 
 window.backToCategories = backToCategories;
