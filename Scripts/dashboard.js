@@ -86,6 +86,9 @@ categories.forEach((category) => {
       case "cold-coffee":
         selectLine("cold-coffee");
         break;
+      case "tea":
+        selectTeaGlass("tea");
+        break;
     }
     CategoriesSection.style.display = "none";
   });
@@ -132,6 +135,10 @@ function selectLine(data) {
       linesSection.style.display = "none";
     });
   });
+}
+
+function selectTeaGlass(data) {
+  console.log(data);
 }
 
 function generateItems(items) {

@@ -307,10 +307,10 @@ body {
   gap: 2px;
 }
 
-.active {
+/* .active {
   background-color: #3f2701;
   color: var(--main-color);
-}
+} */
 
 .line-link {
   width: 100px;
@@ -319,6 +319,49 @@ body {
   line-height: 45px;
   text-decoration: none;
   color: inherit;
+}
+
+.tea-glasses-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tea-glasses {
+  width: 100%;
+  height: 100px;
+  display: none;
+  margin-top: 1rem;
+}
+
+.glasses {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 20px;
+}
+
+.glass {
+  list-style-type: none;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 80px;
+  border-radius: 10px;
+  border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+}
+
+.glass-img {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
 }
 
 .profile-section {
