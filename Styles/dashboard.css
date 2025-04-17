@@ -166,8 +166,8 @@ body {
 .transaction-value {
 }
 
-.products-section {
-  display: flex;
+.categories-section {
+  display: none;
   flex-direction: column;
   gap: 2rem;
 }
@@ -198,19 +198,53 @@ body {
 .categories {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .category {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 100%;
   border: 1px solid var(--coffee-color);
   box-shadow: 0 0 2px #3f27015b;
   border-radius: 20px;
   padding: 10px;
   background-color: #3f27011e;
+}
+
+.products-section {
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--coffee-color);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.product-img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.product div {
+}
+
+.product-title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.product-price {
 }
 
 .profile-section {
