@@ -27,6 +27,8 @@ const profileSection = document.querySelector(".profile-section");
 const categories = document.querySelectorAll(".category");
 const ProductsSection = document.querySelector(".products-section");
 const ProductsWrapper = document.querySelector(".products");
+const linesSection = document.querySelector(".lines-section");
+const lines = document.querySelectorAll(".line-link");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -34,7 +36,6 @@ menuIcon.addEventListener("click", () => {
 
 menuItem.forEach((item) => {
   item.addEventListener("click", (e) => {
-    console.log(e.target.parentElement.id);
     switch (e.target.parentElement.id) {
       case "dashboard-btn":
         dashboardSection.style.display = "flex";
@@ -79,13 +80,62 @@ categories.forEach((category) => {
       case "bubble-tea":
         generateItems(bubbleTea);
         break;
+      case "hot-coffee":
+        selectLine("hot-coffee");
+        break;
+      case "cold-coffee":
+        selectLine("cold-coffee");
+        break;
     }
     CategoriesSection.style.display = "none";
-    ProductsSection.style.display = "block";
   });
 });
 
+function selectLine(data) {
+  linesSection.style.display = "flex";
+
+  lines.forEach((line) => {
+    line.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (data === "hot-coffee") {
+        switch (e.target.dataset.line) {
+          case "100r":
+            generateItems(sadRobosta);
+            break;
+          case "7030r":
+            generateItems(vaftad30Robosta);
+            break;
+          case "100a":
+            generateItems(sadArabica);
+            break;
+          case "7030a":
+            generateItems(vaftad30Arabica);
+            break;
+        }
+      }
+      if (data === "cold-coffee") {
+        switch (e.target.dataset.line) {
+          case "100r":
+            generateItems(coldCoffee_100r);
+            break;
+          case "7030r":
+            generateItems(coldCoffee_7030r);
+            break;
+          case "100a":
+            generateItems(coldCoffee_100a);
+            break;
+          case "7030a":
+            generateItems(coldCoffee_7030a);
+            break;
+        }
+      }
+      linesSection.style.display = "none";
+    });
+  });
+}
+
 function generateItems(items) {
+  ProductsSection.style.display = "block";
   ProductsWrapper.innerHTML = "";
   items.forEach((item) => {
     ProductsWrapper.insertAdjacentHTML(
