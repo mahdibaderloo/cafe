@@ -30,3 +30,89 @@ body {
   overflow-x: hidden;
   font-size: 16px;
 }
+
+.login-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-img-box {
+  width: 100%;
+}
+
+.login-img {
+  width: 100%;
+  height: 100%;
+}
+
+.login-form {
+  margin-top: 2rem;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.login-form div {
+  border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #3f27011e;
+  display: flex;
+  width: 80%;
+}
+
+.icon {
+  width: 30px;
+}
+
+.username-input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-family: var(--font);
+}
+
+.password-input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-family: var(--font);
+}
+
+.login-btn {
+  margin-top: 1rem;
+  border: 1px solid var(--coffee-color);
+  box-shadow: 0 0 2px #3f27015b;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--coffee-color);
+  width: 80%;
+  text-align: center;
+  font-family: var(--font);
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.login-btn:hover {
+  background-color: var(--coffee-color);
+  color: var(--main-color);
+}
