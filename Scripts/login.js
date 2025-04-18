@@ -24,3 +24,8 @@ function validation(usernameValue, passwordValue) {
 function login() {
   window.location.href = "dashboard.html";
 }
+
+window.history.pushState(null, null, window.location.href);
+window.addEventListener("popstate", () => {
+  window.location.href = "index.html";
+});
