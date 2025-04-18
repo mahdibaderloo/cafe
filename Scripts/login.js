@@ -20,3 +20,7 @@ function validation(usernameValue, passwordValue) {
     alert("نام کاربری یا پسورد اشتباه وارد شده :(");
   }
 }
+
+function login() {
+  window.location.href = "dashboard.html";
+}
