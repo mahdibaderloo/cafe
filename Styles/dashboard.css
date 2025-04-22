@@ -365,6 +365,50 @@ body {
 }
 
 .profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.profile-img-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3f27011e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 90%;
+  height: 90%;
+}
+
+.username {
+  margin-top: 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.email {
+  color: #505050;
+}
+
+.edit-profile-btn {
+  margin-top: 1rem;
+  background-color: #3f27014f;
+  color: var(--coffee-color);
+  box-shadow: 0 0 3px #0000003f;
+  outline: none;
+  border: none;
+  font-family: var(--font);
+  padding: 10px 40px;
+  border-radius: 30px;
 }
 
 .menu-section {
