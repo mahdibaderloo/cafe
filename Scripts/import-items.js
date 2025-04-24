@@ -179,7 +179,8 @@ function updateProductsArray(id) {
       timerProgressBar: true,
       color: "#351f08",
       background: "#fff",
-      width: "70%",
+      width: "80%",
+      fontSize: 16,
     });
     Toast.fire({
       icon: "success",
