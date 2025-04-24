@@ -249,6 +249,7 @@ function changePrice(el, id) {
   if (el.innerHTML === "-" && selectedItem[0].count != 0) {
     selectedItem[0].count--;
   }
+
   countElement.innerHTML = selectedItem[0].count;
 
   if (selectedItem[0].count === 0) {
@@ -257,7 +258,7 @@ function changePrice(el, id) {
 
   let prePriceElement =
     el.parentElement.parentElement.querySelector(".product-price");
-  let finalPrice = price * countItem;
+  let finalPrice = selectedItem[0].price * selectedItem[0].count;
   prePriceElement.innerHTML = finalPrice.toLocaleString("EN");
 
   setItemsInLocalStorage(productsContent);
