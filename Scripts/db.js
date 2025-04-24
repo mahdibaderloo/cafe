@@ -9,7 +9,6 @@ const items = [
     product: "اسپرسو",
     price: 35_000,
     disc: "یه شات عصاره قهوه",
-    count: 1,
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const items = [
     product: "اسپرسو ماکیاتو",
     price: 40_000,
     disc: "اسپرسو + فوم شیر",
-    count: 1,
   },
   {
     id: 3,
@@ -25,7 +23,6 @@ const items = [
     product: "کاپوچینو مخصوص",
     price: 65_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 4,
@@ -33,7 +30,6 @@ const items = [
     product: "کافه لاته",
     price: 65_000,
     disc: "اسپرسو + شیر گرم",
-    count: 1,
   },
   {
     id: 5,
@@ -41,7 +37,6 @@ const items = [
     product: "موکا",
     price: 70_000,
     disc: "اسپرسو + فوم شیر + سس شکلات",
-    count: 1,
   },
   {
     id: 6,
@@ -49,7 +44,6 @@ const items = [
     product: "پینک لاته",
     price: 70_000,
     disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
-    count: 1,
   },
   {
     id: 7,
@@ -57,7 +51,6 @@ const items = [
     product: "فندق ماکیاتو",
     price: 70_000,
     disc: "اسپرسو + سیروپ فندق + شیر گرم",
-    count: 1,
   },
   {
     id: 8,
@@ -65,7 +58,6 @@ const items = [
     product: "کارامل ماکیاتو",
     price: 70_000,
     disc: "اسپرسو + سیروپ کارامل + شیر گرم",
-    count: 1,
   },
   {
     id: 9,
@@ -73,7 +65,6 @@ const items = [
     product: "آمریکانو",
     price: 55_000,
     disc: "اسپرسو + آب داغ",
-    count: 1,
   },
   {
     id: 10,
@@ -81,7 +72,6 @@ const items = [
     product: "لاته وانیل",
     price: 70_000,
     disc: "اسپرسو + سیروپ وانیل + شیر گرم",
-    count: 1,
   },
   {
     id: 11,
@@ -89,7 +79,6 @@ const items = [
     product: "لاته دارچین عسل",
     price: 70_000,
     disc: "اسپرسو + دارچین + عسل + شیر گرم",
-    count: 1,
   },
   {
     id: 12,
@@ -97,7 +86,6 @@ const items = [
     product: "لاته شکلات",
     price: 70_000,
     disc: "اسپرسو + سیروپ شکلات + شیر گرم",
-    count: 1,
   },
 
   {
@@ -106,7 +94,6 @@ const items = [
     product: "اسپرسو",
     price: 40_000,
     disc: "یه شات عصاره قهوه",
-    count: 1,
   },
   {
     id: 14,
@@ -114,7 +101,6 @@ const items = [
     product: "اسپرسو ماکیاتو",
     price: 45_000,
     disc: "اسپرسو + فوم شیر",
-    count: 1,
   },
   {
     id: 15,
@@ -122,7 +108,6 @@ const items = [
     product: "اسپرسو چاکلت لیلو",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 16,
@@ -130,7 +115,6 @@ const items = [
     product: "کاپوچینو",
     price: 60_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 17,
@@ -138,7 +122,6 @@ const items = [
     product: "کاپوچینو مخصوص",
     price: 70_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 18,
@@ -146,7 +129,6 @@ const items = [
     product: "کافه لاته",
     price: 70_000,
     disc: "اسپرسو + شیر گرم",
-    count: 1,
   },
   {
     id: 19,
@@ -154,7 +136,6 @@ const items = [
     product: "موکا",
     price: 75_000,
     disc: "اسپرسو + فوم شیر + سس شکلات",
-    count: 1,
   },
   {
     id: 20,
@@ -162,7 +143,6 @@ const items = [
     product: "پینک لاته",
     price: 75_000,
     disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
-    count: 1,
   },
   {
     id: 21,
@@ -170,7 +150,6 @@ const items = [
     product: "فندق ماکیاتو",
     price: 75_000,
     disc: "اسپرسو + سیروپ فندق + شیر گرم",
-    count: 1,
   },
   {
     id: 22,
@@ -178,7 +157,6 @@ const items = [
     product: "کارامل ماکیاتو",
     price: 75_000,
     disc: "اسپرسو + سیروپ کارامل + شیر گرم",
-    count: 1,
   },
   {
     id: 23,
@@ -186,7 +164,6 @@ const items = [
     product: "آمریکانو",
     price: 60_000,
     disc: "اسپرسو + آب داغ",
-    count: 1,
   },
   {
     id: 24,
@@ -194,7 +171,6 @@ const items = [
     product: "قهوه ترک",
     price: 60_000,
     disc: "پودر قهوه + آب سرد",
-    count: 1,
   },
   {
     id: 25,
@@ -202,7 +178,6 @@ const items = [
     product: "قهوه عربی شکلاتی",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 26,
@@ -210,7 +185,6 @@ const items = [
     product: "قهوه یونانی",
     price: 65_000,
     disc: "پودر قهوه + شیر + شکر",
-    count: 1,
   },
   {
     id: 27,
@@ -218,7 +192,6 @@ const items = [
     product: "قهوه فرانسه",
     price: 60_000,
     disc: "پودر قهوه + آب داغ",
-    count: 1,
   },
   {
     id: 28,
@@ -226,7 +199,6 @@ const items = [
     product: "لاته وانیل",
     price: 75_000,
     disc: "اسپرسو + سیروپ وانیل + شیر گرم",
-    count: 1,
   },
   {
     id: 29,
@@ -234,7 +206,6 @@ const items = [
     product: "لاته دارچین عسل",
     price: 75_000,
     disc: "اسپرسو + دارچین + عسل + شیر گرم",
-    count: 1,
   },
   {
     id: 30,
@@ -242,7 +213,6 @@ const items = [
     product: "لاته شکلات",
     price: 75_000,
     disc: "اسپرسو + سیروپ شکلات + شیر گرم",
-    count: 1,
   },
 
   {
@@ -251,7 +221,6 @@ const items = [
     product: "اسپرسو",
     price: 50_000,
     disc: "یه شات عصاره قهوه",
-    count: 1,
   },
   {
     id: 32,
@@ -259,7 +228,6 @@ const items = [
     product: "اسپرسو ماکیاتو",
     price: 55_000,
     disc: "اسپرسو + فوم شیر",
-    count: 1,
   },
   {
     id: 33,
@@ -267,7 +235,6 @@ const items = [
     product: "کاپوچینو مخصوص",
     price: 75_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 34,
@@ -275,7 +242,6 @@ const items = [
     product: "کافه لاته",
     price: 75_000,
     disc: "اسپرسو + شیر گرم",
-    count: 1,
   },
   {
     id: 35,
@@ -283,7 +249,6 @@ const items = [
     product: "موکا",
     price: 80_000,
     disc: "اسپرسو + فوم شیر + سس شکلات",
-    count: 1,
   },
   {
     id: 36,
@@ -291,7 +256,6 @@ const items = [
     product: "پینک لاته",
     price: 80_000,
     disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
-    count: 1,
   },
   {
     id: 37,
@@ -299,7 +263,6 @@ const items = [
     product: "فندق ماکیاتو",
     price: 80_000,
     disc: "اسپرسو + سیروپ فندق + شیر گرم",
-    count: 1,
   },
   {
     id: 38,
@@ -307,7 +270,6 @@ const items = [
     product: "کارامل ماکیاتو",
     price: 80_000,
     disc: "اسپرسو + سیروپ کارامل + شیر گرم",
-    count: 1,
   },
   {
     id: 39,
@@ -315,7 +277,6 @@ const items = [
     product: "آمریکانو",
     price: 65_000,
     disc: "اسپرسو + آب داغ",
-    count: 1,
   },
   {
     id: 40,
@@ -323,7 +284,6 @@ const items = [
     product: "لاته وانیل",
     price: 80_000,
     disc: "اسپرسو + سیروپ وانیل + شیر گرم",
-    count: 1,
   },
   {
     id: 41,
@@ -331,7 +291,6 @@ const items = [
     product: "لاته دارچین عسل",
     price: 80_000,
     disc: "اسپرسو + دارچین + عسل + شیر گرم",
-    count: 1,
   },
   {
     id: 42,
@@ -339,7 +298,6 @@ const items = [
     product: "لاته شکلات",
     price: 80_000,
     disc: "اسپرسو + سیروپ شکلات + شیر گرم",
-    count: 1,
   },
 
   {
@@ -348,7 +306,6 @@ const items = [
     product: "اسپرسو",
     price: 55_000,
     disc: "یه شات عصاره قهوه",
-    count: 1,
   },
   {
     id: 123,
@@ -356,7 +313,6 @@ const items = [
     product: "اسپرسو ماکیاتو",
     price: 60_000,
     disc: "اسپرسو + فوم شیر",
-    count: 1,
   },
   {
     id: 124,
@@ -364,7 +320,6 @@ const items = [
     product: "کاپوچینو مخصوص",
     price: 80_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 125,
@@ -372,7 +327,6 @@ const items = [
     product: "کافه لاته",
     price: 80_000,
     disc: "اسپرسو + شیر گرم",
-    count: 1,
   },
   {
     id: 126,
@@ -380,7 +334,6 @@ const items = [
     product: "موکا",
     price: 85_000,
     disc: "اسپرسو + فوم شیر + سس شکلات",
-    count: 1,
   },
   {
     id: 127,
@@ -388,7 +341,6 @@ const items = [
     product: "پینک لاته",
     price: 85_000,
     disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
-    count: 1,
   },
   {
     id: 128,
@@ -396,7 +348,6 @@ const items = [
     product: "فندق ماکیاتو",
     price: 85_000,
     disc: "اسپرسو + سیروپ فندق + شیر گرم",
-    count: 1,
   },
   {
     id: 129,
@@ -404,7 +355,6 @@ const items = [
     product: "کارامل ماکیاتو",
     price: 85_000,
     disc: "اسپرسو + سیروپ کارامل + شیر گرم",
-    count: 1,
   },
   {
     id: 130,
@@ -412,7 +362,6 @@ const items = [
     product: "آمریکانو",
     price: 70_000,
     disc: "اسپرسو + آب داغ",
-    count: 1,
   },
   {
     id: 131,
@@ -420,7 +369,6 @@ const items = [
     product: "لاته وانیل",
     price: 85_000,
     disc: "اسپرسو + سیروپ وانیل + شیر گرم",
-    count: 1,
   },
   {
     id: 132,
@@ -428,7 +376,6 @@ const items = [
     product: "لاته دارچین عسل",
     price: 85_000,
     disc: "اسپرسو + دارچین + عسل + شیر گرم",
-    count: 1,
   },
   {
     id: 133,
@@ -436,7 +383,6 @@ const items = [
     product: "لاته شکلات",
     price: 85_000,
     disc: "اسپرسو + سیروپ شکلات + شیر گرم",
-    count: 1,
   },
 
   // ==================
@@ -449,7 +395,6 @@ const items = [
     product: "شیر گرم",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 44,
@@ -457,7 +402,6 @@ const items = [
     product: "شیر عسل",
     price: 60_000,
     disc: "",
-    count: 1,
   },
   {
     id: 45,
@@ -465,7 +409,6 @@ const items = [
     product: "شیر نسکوئیک",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 46,
@@ -473,7 +416,6 @@ const items = [
     product: "شیر لوتوس",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 47,
@@ -481,7 +423,6 @@ const items = [
     product: "هات چاکلت",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 48,
@@ -489,7 +430,6 @@ const items = [
     product: "وایت چاکلت",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 49,
@@ -497,7 +437,6 @@ const items = [
     product: "چای ماسالا",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 50,
@@ -505,7 +444,6 @@ const items = [
     product: "پینک چاکلت",
     price: 65_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -518,7 +456,6 @@ const items = [
     product: "آیس لاته",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 52,
@@ -526,7 +463,6 @@ const items = [
     product: "آیس آمریکانو",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 53,
@@ -534,7 +470,6 @@ const items = [
     product: "آیس فندق",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 54,
@@ -542,7 +477,6 @@ const items = [
     product: "آیس کارامل ماکیاتو",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 55,
@@ -550,7 +484,6 @@ const items = [
     product: "آیس موکا",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 56,
@@ -558,7 +491,6 @@ const items = [
     product: "کوک اسپرسو",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 57,
@@ -566,7 +498,6 @@ const items = [
     product: "هایپ اسپرسو",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 58,
@@ -574,7 +505,6 @@ const items = [
     product: "آفوگاتو",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 59,
@@ -582,7 +512,6 @@ const items = [
     product: "کافه گلاسه",
     price: 90_000,
     disc: "",
-    count: 1,
   },
 
   {
@@ -591,7 +520,6 @@ const items = [
     product: "آیس لاته",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 61,
@@ -599,7 +527,6 @@ const items = [
     product: "آیس کاپوچینو",
     price: 65_000,
     disc: "اسپرسو + شیر گرم + کرم خامه",
-    count: 1,
   },
   {
     id: 62,
@@ -607,7 +534,6 @@ const items = [
     product: "آیس آمریکانو",
     price: 60_000,
     disc: "",
-    count: 1,
   },
   {
     id: 63,
@@ -615,7 +541,6 @@ const items = [
     product: "آیس فندق",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 64,
@@ -623,7 +548,6 @@ const items = [
     product: "آیس کارامل ماکیاتو",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 65,
@@ -631,7 +555,6 @@ const items = [
     product: "آیس موکا",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 66,
@@ -639,7 +562,6 @@ const items = [
     product: "کوک اسپرسو",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 67,
@@ -647,7 +569,6 @@ const items = [
     product: "هایپ اسپرسو",
     price: 85_000,
     disc: "",
-    count: 1,
   },
   {
     id: 68,
@@ -655,7 +576,6 @@ const items = [
     product: "آفوگاتو",
     price: 85_000,
     disc: "",
-    count: 1,
   },
   {
     id: 69,
@@ -663,7 +583,6 @@ const items = [
     product: "کافه گلاسه",
     price: 95_000,
     disc: "",
-    count: 1,
   },
   {
     id: 70,
@@ -671,7 +590,6 @@ const items = [
     product: "کلد برو",
     price: 75_000,
     disc: "",
-    count: 1,
   },
 
   {
@@ -680,7 +598,6 @@ const items = [
     product: "آیس لاته",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 72,
@@ -688,7 +605,6 @@ const items = [
     product: "آیس آمریکانو",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 73,
@@ -696,7 +612,6 @@ const items = [
     product: "آیس فندق",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 74,
@@ -704,7 +619,6 @@ const items = [
     product: "آیس کارامل ماکیاتو",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 75,
@@ -712,7 +626,6 @@ const items = [
     product: "آیس موکا",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 76,
@@ -720,7 +633,6 @@ const items = [
     product: "کوک اسپرسو",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 77,
@@ -728,7 +640,6 @@ const items = [
     product: "هایپ اسپرسو",
     price: 90_000,
     disc: "",
-    count: 1,
   },
   {
     id: 78,
@@ -736,7 +647,6 @@ const items = [
     product: "آفوگاتو",
     price: 90_000,
     disc: "",
-    count: 1,
   },
   {
     id: 79,
@@ -744,7 +654,6 @@ const items = [
     product: "کافه گلاسه",
     price: 100_000,
     disc: "",
-    count: 1,
   },
 
   {
@@ -753,7 +662,6 @@ const items = [
     product: "آیس لاته",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 135,
@@ -761,7 +669,6 @@ const items = [
     product: "آیس آمریکانو",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 136,
@@ -769,7 +676,6 @@ const items = [
     product: "آیس فندق",
     price: 85_000,
     disc: "",
-    count: 1,
   },
   {
     id: 137,
@@ -777,7 +683,6 @@ const items = [
     product: "آیس کارامل ماکیاتو",
     price: 85_000,
     disc: "",
-    count: 1,
   },
   {
     id: 138,
@@ -785,7 +690,6 @@ const items = [
     product: "آیس موکا",
     price: 85_000,
     disc: "",
-    count: 1,
   },
   {
     id: 139,
@@ -793,7 +697,6 @@ const items = [
     product: "کوک اسپرسو",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 140,
@@ -801,7 +704,6 @@ const items = [
     product: "هایپ اسپرسو",
     price: 95_000,
     disc: "",
-    count: 1,
   },
   {
     id: 141,
@@ -809,7 +711,6 @@ const items = [
     product: "آفوگاتو",
     price: 95_000,
     disc: "",
-    count: 1,
   },
   {
     id: 142,
@@ -817,7 +718,6 @@ const items = [
     product: "کافه گلاسه",
     price: 105_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -830,7 +730,6 @@ const items = [
     product: "شیک وانیل",
     price: 95_000,
     disc: "",
-    count: 1,
   },
   {
     id: 81,
@@ -838,7 +737,6 @@ const items = [
     product: "شیک نوتلا",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 82,
@@ -846,7 +744,6 @@ const items = [
     product: "شیک قهوه",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 83,
@@ -854,7 +751,6 @@ const items = [
     product: "شیک بادام زمینی",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 84,
@@ -862,7 +758,6 @@ const items = [
     product: "شیک لوتوس",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 85,
@@ -870,7 +765,6 @@ const items = [
     product: "شیک چاکلت براونی",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 86,
@@ -878,7 +772,6 @@ const items = [
     product: "شیک چانکی مانکی",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 87,
@@ -886,7 +779,6 @@ const items = [
     product: "شیک موز شکلات",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 88,
@@ -894,7 +786,6 @@ const items = [
     product: "شیک موز توت فرنگی",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 89,
@@ -902,7 +793,6 @@ const items = [
     product: "شیک موز لوتوس",
     price: 120_000,
     disc: "",
-    count: 1,
   },
   {
     id: 90,
@@ -910,7 +800,6 @@ const items = [
     product: "شیک موز نوتلا",
     price: 120_000,
     disc: "",
-    count: 1,
   },
   {
     id: 91,
@@ -918,7 +807,6 @@ const items = [
     product: "شیک نوستالژی",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 92,
@@ -926,7 +814,6 @@ const items = [
     product: "شیک مخصوص لیلو",
     price: 125_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -939,7 +826,6 @@ const items = [
     product: "لیموناد",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 94,
@@ -947,7 +833,6 @@ const items = [
     product: "لیموناد توت فرنگی",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 95,
@@ -955,7 +840,6 @@ const items = [
     product: "بلو هاوایی",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 96,
@@ -963,7 +847,6 @@ const items = [
     product: "کوکوپاین",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 97,
@@ -971,7 +854,6 @@ const items = [
     product: "لوکا",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 98,
@@ -979,7 +861,6 @@ const items = [
     product: "اسپایسی ماکتل",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 99,
@@ -987,7 +868,6 @@ const items = [
     product: "موهیتو",
     price: 75_000,
     disc: "",
-    count: 1,
   },
   {
     id: 100,
@@ -995,7 +875,6 @@ const items = [
     product: "موهیتو توت فرنگی",
     price: 80_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -1008,7 +887,6 @@ const items = [
     product: "کیک روز",
     price: 70_000,
     disc: "",
-    count: 1,
   },
   {
     id: 102,
@@ -1016,7 +894,6 @@ const items = [
     product: "کیک بستنی",
     price: 80_000,
     disc: "",
-    count: 1,
   },
   {
     id: 103,
@@ -1024,7 +901,6 @@ const items = [
     product: "کوکی",
     price: 35_000,
     disc: "",
-    count: 1,
   },
   {
     id: 104,
@@ -1032,7 +908,6 @@ const items = [
     product: "موچی",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 105,
@@ -1040,7 +915,6 @@ const items = [
     product: "کروسان",
     price: 60_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -1053,7 +927,6 @@ const items = [
     product: "تست کره بادام زمینی",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 107,
@@ -1061,7 +934,6 @@ const items = [
     product: "تست نوتلا",
     price: 65_000,
     disc: "",
-    count: 1,
   },
   {
     id: 108,
@@ -1069,7 +941,6 @@ const items = [
     product: "اسنک مخصوص لیلو",
     price: 90_000,
     disc: "",
-    count: 1,
   },
   {
     id: 109,
@@ -1077,7 +948,6 @@ const items = [
     product: "چیپس و پنیر",
     price: 100_000,
     disc: "",
-    count: 1,
   },
   {
     id: 110,
@@ -1085,7 +955,6 @@ const items = [
     product: "چیپس و پنیر مخصوص",
     price: 115_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -1098,7 +967,6 @@ const items = [
     product: "چای داغ",
     price: 35_000,
     disc: "",
-    count: 1,
   },
   {
     id: 112,
@@ -1106,7 +974,6 @@ const items = [
     product: "چای دارچین",
     price: 37_000,
     disc: "",
-    count: 1,
   },
   {
     id: 113,
@@ -1114,7 +981,6 @@ const items = [
     product: "چای دارچین عسل",
     price: 40_000,
     disc: "",
-    count: 1,
   },
   {
     id: 114,
@@ -1122,7 +988,6 @@ const items = [
     product: "چای سبز",
     price: 40_000,
     disc: "",
-    count: 1,
   },
   {
     id: 115,
@@ -1130,7 +995,6 @@ const items = [
     product: "چای ترش",
     price: 40_000,
     disc: "",
-    count: 1,
   },
   {
     id: 116,
@@ -1138,7 +1002,6 @@ const items = [
     product: "دمنوش سرماخوردگی",
     price: 50_000,
     disc: "",
-    count: 1,
   },
   {
     id: 117,
@@ -1146,7 +1009,6 @@ const items = [
     product: "دمنوش گل گاو زبان",
     price: 50_000,
     disc: "",
-    count: 1,
   },
   {
     id: 118,
@@ -1154,7 +1016,6 @@ const items = [
     product: "دمنوش هل و بهار نارنج",
     price: 50_000,
     disc: "",
-    count: 1,
   },
   {
     id: 119,
@@ -1162,7 +1023,6 @@ const items = [
     product: "دمنوش به لیمو گلمحمدی",
     price: 50_000,
     disc: "",
-    count: 1,
   },
   {
     id: 120,
@@ -1170,7 +1030,6 @@ const items = [
     product: "دمنوش زنجبیل",
     price: 50_000,
     disc: "",
-    count: 1,
   },
   {
     id: 121,
@@ -1178,7 +1037,6 @@ const items = [
     product: "دمنوش دارچین",
     price: 50_000,
     disc: "",
-    count: 1,
   },
 
   {
@@ -1187,7 +1045,6 @@ const items = [
     product: "چای داغ",
     price: 40_000,
     disc: "",
-    count: 1,
   },
   {
     id: 158,
@@ -1195,7 +1052,6 @@ const items = [
     product: "چای دارچین",
     price: 42_000,
     disc: "",
-    count: 1,
   },
   {
     id: 159,
@@ -1203,7 +1059,6 @@ const items = [
     product: "چای دارچین عسل",
     price: 45_000,
     disc: "",
-    count: 1,
   },
   {
     id: 160,
@@ -1211,7 +1066,6 @@ const items = [
     product: "چای سبز",
     price: 45_000,
     disc: "",
-    count: 1,
   },
   {
     id: 161,
@@ -1219,7 +1073,6 @@ const items = [
     product: "چای ترش",
     price: 45_000,
     disc: "",
-    count: 1,
   },
   {
     id: 162,
@@ -1227,7 +1080,6 @@ const items = [
     product: "دمنوش سرماخوردگی",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 163,
@@ -1235,7 +1087,6 @@ const items = [
     product: "دمنوش گل گاو زبان",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 164,
@@ -1243,7 +1094,6 @@ const items = [
     product: "دمنوش هل و بهار نارنج",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 165,
@@ -1251,7 +1101,6 @@ const items = [
     product: "دمنوش به لیمو گلمحمدی",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 166,
@@ -1259,7 +1108,6 @@ const items = [
     product: "دمنوش زنجبیل",
     price: 55_000,
     disc: "",
-    count: 1,
   },
   {
     id: 167,
@@ -1267,7 +1115,6 @@ const items = [
     product: "دمنوش دارچین",
     price: 55_000,
     disc: "",
-    count: 1,
   },
 
   // ==================
@@ -1280,7 +1127,6 @@ const items = [
     product: "شیک اسپرسو بوبا",
     price: 130_000,
     disc: "",
-    count: 1,
   },
   {
     id: 144,
@@ -1288,7 +1134,6 @@ const items = [
     product: "شیک نوتلا بوبا",
     price: 135_000,
     disc: "",
-    count: 1,
   },
   {
     id: 145,
@@ -1296,7 +1141,6 @@ const items = [
     product: "شیک نوتلا موز بوبا",
     price: 145_000,
     disc: "",
-    count: 1,
   },
   {
     id: 146,
@@ -1304,7 +1148,6 @@ const items = [
     product: "شیک لوتوس بوبا",
     price: 135_000,
     disc: "",
-    count: 1,
   },
   {
     id: 147,
@@ -1312,7 +1155,6 @@ const items = [
     product: "شیک لوتوس موز بوبا",
     price: 145_000,
     disc: "",
-    count: 1,
   },
   {
     id: 148,
@@ -1320,7 +1162,6 @@ const items = [
     product: "شیک توت فرنگی بوبا",
     price: 130_000,
     disc: "",
-    count: 1,
   },
   {
     id: 149,
@@ -1328,7 +1169,6 @@ const items = [
     product: "شیک مخصوص بوبا",
     price: 160_000,
     disc: "",
-    count: 1,
   },
   {
     id: 150,
@@ -1336,7 +1176,6 @@ const items = [
     product: "آیس کافی بوبا",
     price: 100_000,
     disc: "",
-    count: 1,
   },
   {
     id: 151,
@@ -1344,7 +1183,6 @@ const items = [
     product: "آیس موکا بوبا",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 152,
@@ -1352,7 +1190,6 @@ const items = [
     product: "آیس موکا فندقی بوبا",
     price: 110_000,
     disc: "",
-    count: 1,
   },
   {
     id: 153,
@@ -1360,7 +1197,6 @@ const items = [
     product: "آیس کارامل ماکیاتو بوبا",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 154,
@@ -1368,7 +1204,6 @@ const items = [
     product: "آیس وانیل بوبا",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 155,
@@ -1376,7 +1211,6 @@ const items = [
     product: "آیس پیناکولادا بوبا",
     price: 105_000,
     disc: "",
-    count: 1,
   },
   {
     id: 156,
@@ -1384,7 +1218,6 @@ const items = [
     product: "آیس توت فرنگی بوبا",
     price: 105_000,
     disc: "",
-    count: 1,
   },
 ];
 

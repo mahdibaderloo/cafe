@@ -169,7 +169,7 @@ function updateProductsArray(id) {
   let selectedItem = items.filter((item) => item.id === id);
 
   if (!productsContent.find((item) => item.id === id)) {
-    productsContent.push(selectedItem[0]);
+    productsContent.push({ ...selectedItem[0], count: 1 });
 
     const Toast = Swal.mixin({
       toast: true,
@@ -238,8 +238,8 @@ function addToCart(data) {
 }
 
 function changePrice(el, id) {
-  let selectedItem = items.filter((item) => item.id === id);
-  console.log(selectedItem[0]);
+  let localItems = getItemsInLocalStorage();
+  let selectedItem = localItems.filter((item) => item.id === id);
   let countElement = el.parentElement.children[1];
 
   if (el.innerHTML === "+" && selectedItem[0].count < 10) {
@@ -298,9 +298,7 @@ function removeItem(id) {
 }
 
 window.addEventListener("load", (event) => {
-  // cold.forEach((product) => {
-  //   createListItems(product.product, product.price, product.disc, product.id);
-  // });
+  createListItems("cold");
 
   let localItems = getItemsInLocalStorage();
   addToCart(localItems);
