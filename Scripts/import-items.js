@@ -169,7 +169,7 @@ function updateProductsArray(id) {
   let selectedItem = items.filter((item) => item.id === id);
 
   if (!productsContent.find((item) => item.id === id)) {
-    productsContent.push(selectedItem[0]);
+    productsContent.push({ ...selectedItem[0], count: 1 });
 
     const Toast = Swal.mixin({
       toast: true,
@@ -191,12 +191,12 @@ function updateProductsArray(id) {
   addToCart(productsContent);
 }
 
-function setItemsInLocalStorage(itemsWrapper) {
-  localStorage.setItem("itemsWrapper", JSON.stringify(itemsWrapper));
+function setItemsInLocalStorage(data) {
+  localStorage.setItem("items", JSON.stringify(data));
 }
 
 function getItemsInLocalStorage() {
-  let localItems = localStorage.getItem("itemsWrapper");
+  let localItems = localStorage.getItem("items");
 
   if (localItems) {
     productsContent = JSON.parse(localItems);
