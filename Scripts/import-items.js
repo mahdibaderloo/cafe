@@ -169,7 +169,7 @@ function updateProductsArray(id) {
   let selectedItem = items.filter((item) => item.id === id);
 
   if (!productsContent.find((item) => item.id === id)) {
-    productsContent.push({ ...selectedItem[0], count: 1 });
+    productsContent.push(selectedItem[0]);
 
     const Toast = Swal.mixin({
       toast: true,
@@ -220,11 +220,11 @@ function addToCart(data) {
                 <div class="product-count">
                     <span class="product-count-plus" onclick="changePrice(this, ${
                       item.id
-                    }, ${item.price})">+</span>
+                    })">+</span>
                     <span class="product-count-number">${item.count}</span>
                     <span class="product-count-minus" onclick="changePrice(this, ${
                       item.id
-                    }, ${item.price})">-</span>
+                    })">-</span>
                 </div>
                 <h3 class="product-price">${item.price.toLocaleString(
                   "EN"
@@ -237,33 +237,21 @@ function addToCart(data) {
   // changeCartLight()
 }
 
-function changePrice(el, id, price) {
-  console.log(productsContent);
-
+function changePrice(el, id) {
+  let selectedItem = items.filter((item) => item.id === id);
+  console.log(selectedItem[0]);
   let countElement = el.parentElement.children[1];
-  let countItem = el.parentElement.children[1].textContent;
 
-  if (el.innerHTML === "+" && countItem < 10) {
-    countItem++;
-
-    if (productsContent.find((item) => item.id === id)) {
-      let findItem = productsContent.find((item) => item.id === id);
-      findItem.count = countItem;
-    }
-    countElement.innerHTML = countItem;
+  if (el.innerHTML === "+" && selectedItem[0].count < 10) {
+    selectedItem[0].count++;
   }
 
-  if (el.innerHTML === "-" && countItem != 0) {
-    countItem--;
-
-    if (productsContent.find((item) => item.id === id)) {
-      let findItem = productsContent.find((item) => item.id === id);
-      findItem.count = countItem;
-    }
-    countElement.innerHTML = countItem;
+  if (el.innerHTML === "-" && selectedItem[0].count != 0) {
+    selectedItem[0].count--;
   }
+  countElement.innerHTML = selectedItem[0].count;
 
-  if (countItem === 0) {
+  if (selectedItem[0].count === 0) {
     removeItem(id);
   }
 
