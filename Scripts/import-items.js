@@ -1,23 +1,6 @@
-import {
-  sadRobosta,
-  vaftad30Robosta,
-  vaftad30Arabica,
-  sadArabica,
-  hot,
-  coldCoffee_100r,
-  coldCoffee_7030r,
-  coldCoffee_7030a,
-  coldCoffee_100a,
-  shake,
-  cold,
-  cake,
-  snack,
-  tea_1,
-  tea_2,
-  bubbleTea,
-} from "../Scripts/db.js";
+import items from "./db.js";
 
-const items = document.querySelector(".items");
+const itemsWrapper = document.querySelector(".items");
 const category = document.querySelectorAll(".category");
 const coffeeLines = document.querySelector(".coffee-lines");
 const lines = document.querySelectorAll(".line-link");
@@ -32,231 +15,152 @@ let productsContent = [];
 category.forEach((item) => {
   item.addEventListener("click", (event) => {
     event.preventDefault();
-    items.innerHTML = "";
+    itemsWrapper.innerHTML = "";
 
     if (event.target.dataset.item === "snack") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      snack.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("snack");
     }
 
     if (event.target.dataset.item === "tea") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "flex";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
       glasses.forEach((glass) => {
         glass.addEventListener("click", (event) => {
           event.preventDefault();
-          items.innerHTML = "";
+          itemsWrapper.innerHTML = "";
 
-          if (event.target.dataset.line === "tea-1")
-            tea_1.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "tea-2")
-            tea_2.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
+          if (event.target.dataset.line === "tea-1") {
+            createListItems("tea-1");
+          }
+          if (event.target.dataset.line === "tea-2") {
+            createListItems("tea-2");
+          }
         });
       });
     }
+
     if (event.target.dataset.item === "cake") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      cake.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("cake");
     }
+
     if (event.target.dataset.item === "cold-drink") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      cold.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("cold");
     }
+
     if (event.target.dataset.item === "shake") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      shake.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("shake");
     }
+
     if (event.target.dataset.item === "hot-drink") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      hot.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("hot");
     }
+
     if (event.target.dataset.item === "bubble-tea") {
       coffeeLines.style.display = "none";
       teaGlasses.style.display = "none";
-      items.style.marginTop = "1rem";
+      itemsWrapper.style.marginTop = "1rem";
 
-      bubbleTea.forEach((product) => {
-        createListItems(
-          product.product,
-          product.price,
-          product.disc,
-          product.id
-        );
-      });
+      createListItems("bubbleTea");
     }
+
     if (event.target.dataset.item === "hot-coffee") {
       teaGlasses.style.display = "none";
       coffeeLines.style.display = "flex";
-      items.style.marginTop = "5rem";
+      itemsWrapper.style.marginTop = "5rem";
 
       lines.forEach((line) => {
         line.addEventListener("click", (event) => {
           event.preventDefault();
-          items.innerHTML = "";
+          itemsWrapper.innerHTML = "";
 
-          if (event.target.dataset.line === "100r")
-            sadRobosta.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "7030a")
-            vaftad30Arabica.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "7030r")
-            vaftad30Robosta.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "100a")
-            sadArabica.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
+          if (event.target.dataset.line === "100r") {
+            createListItems("sadRobosta");
+          }
+
+          if (event.target.dataset.line === "7030a") {
+            createListItems("vaftad30Arabica");
+          }
+
+          if (event.target.dataset.line === "7030r") {
+            createListItems("vaftad30Robosta");
+          }
+
+          if (event.target.dataset.line === "100a") {
+            createListItems("sadArabica");
+          }
         });
       });
     }
+
     if (event.target.dataset.item === "cold-coffee") {
       teaGlasses.style.display = "none";
       coffeeLines.style.display = "flex";
-      items.style.marginTop = "5rem";
+      itemsWrapper.style.marginTop = "5rem";
 
       lines.forEach((line) => {
         line.addEventListener("click", (event) => {
           event.preventDefault();
-          items.innerHTML = "";
+          itemsWrapper.innerHTML = "";
 
-          if (event.target.dataset.line === "100r")
-            coldCoffee_100r.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "7030a")
-            coldCoffee_7030a.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "7030r")
-            coldCoffee_7030r.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
-          if (event.target.dataset.line === "100a")
-            coldCoffee_100a.forEach((product) => {
-              createListItems(
-                product.product,
-                product.price,
-                product.disc,
-                product.id
-              );
-            });
+          if (event.target.dataset.line === "100r") {
+            createListItems("coldCoffee_100r");
+          }
+
+          if (event.target.dataset.line === "7030a") {
+            createListItems("coldCoffee_7030a");
+          }
+
+          if (event.target.dataset.line === "7030r") {
+            createListItems("coldCoffee_7030r");
+          }
+
+          if (event.target.dataset.line === "100a") {
+            createListItems("coldCoffee_100a");
+          }
         });
       });
     }
   });
 });
 
-function createListItems(productTitle, productPrice, productDisc, productID) {
-  let newItemLi = `<li class="item"><div class="item-top"><img class="item-img" src="Images/Cafe-Au-Lait-001s.jpg" alt=""><div class="item__content"><h3 class="item-title">${productTitle}</h3><p class="item-desc">${productDisc}</p></div></div><div class="item-bottom"><p class="item-price">${productPrice.toLocaleString(
-    "EN"
-  )}</p><button class="item-btn" onclick="updateProductsArray('${productTitle}' , ${productPrice}, ${productID})">افزودن به سفارشات</button></div></li>`;
-
-  items.insertAdjacentHTML("beforeend", newItemLi);
+function createListItems(data) {
+  let selectedItems = items.filter((item) => item.category === data);
+  selectedItems.forEach((item) => {
+    itemsWrapper.insertAdjacentHTML(
+      "beforeend",
+      `<li class="item"><div class="item-top"><img class="item-img" src="Images/Cafe-Au-Lait-001s.jpg" alt=""><div class="item__content"><h3 class="item-title">${
+        item.product
+      }</h3><p class="item-desc">${
+        item.disc
+      }</p></div></div><div class="item-bottom"><p class="item-price">${item.price.toLocaleString(
+        "EN"
+      )}</p><button class="item-btn" onclick="updateProductsArray('${
+        item.product
+      }' , ${item.price}, ${item.id})">افزودن به سفارشات</button></div></li>`
+    );
+  });
 }
 
 function updateProductsArray(title, price, id) {
@@ -292,12 +196,12 @@ function updateProductsArray(title, price, id) {
   addToCart(productsContent);
 }
 
-function setItemsInLocalStorage(items) {
-  localStorage.setItem("items", JSON.stringify(items));
+function setItemsInLocalStorage(itemsWrapper) {
+  localStorage.setItem("itemsWrapper", JSON.stringify(itemsWrapper));
 }
 
 function getItemsInLocalStorage() {
-  let localItems = localStorage.getItem("items");
+  let localItems = localStorage.getItem("itemsWrapper");
 
   if (localItems) {
     productsContent = JSON.parse(localItems);
@@ -307,8 +211,8 @@ function getItemsInLocalStorage() {
   return productsContent;
 }
 
-function addToCart(items) {
-  items.forEach((item) => {
+function addToCart(itemsWrapper) {
+  itemsWrapper.forEach((item) => {
     let newCartItem = `
             <li class="product">
             <div class="product-right-content">
@@ -378,7 +282,7 @@ function changePrice(el, id, price) {
 
 // function changeCartLight () {
 
-//     if (!items || totalPrice.innerHTML == 0) {
+//     if (!itemsWrapper || totalPrice.innerHTML == 0) {
 //         shoppingCart.style.color = '#fff'
 //     } else {
 //         shoppingCart.style.color = '#000'
@@ -409,9 +313,9 @@ function removeItem(id) {
 }
 
 window.addEventListener("load", (event) => {
-  cold.forEach((product) => {
-    createListItems(product.product, product.price, product.disc, product.id);
-  });
+  // cold.forEach((product) => {
+  //   createListItems(product.product, product.price, product.disc, product.id);
+  // });
 
   let localItems = getItemsInLocalStorage();
   addToCart(localItems);
