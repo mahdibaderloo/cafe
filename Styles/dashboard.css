@@ -455,5 +455,130 @@ body {
 }
 
 .popup-section {
-  display: none;
+  /* display: none; */
+  width: 90%;
+  height: 400px;
+  padding: 14px;
+  padding-top: 1rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 5px #747474;
+  border-radius: 20px;
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  transform: translate(50%);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  width: 28px;
+}
+
+.popup-header-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popup-main {
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.popup-img-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.popup-img-box label {
+  background-color: gray;
+  opacity: 0.6;
+  width: 100%;
+  padding: 6px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-image {
+  width: 100%;
+  height: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-box {
+  width: 100%;
+  position: relative;
+}
+
+.input-box label {
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  background-color: var(--main-color);
+  font-size: 14px;
+  padding: 2px;
+  color: var(--coffee-color);
+  transition: 0.2s all ease;
+}
+
+.product-title-input,
+.product-price-input {
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--coffee-color);
+}
+
+.input-box:focus-within label,
+.input-box input:not(:placeholder-shown) + label {
+  top: -8px;
+  right: 8px;
+}
+
+.buttons {
+  grid-column: 1/3;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-product,
+.submit-product {
+  flex: 1;
+  border-radius: 10px;
+  border: none;
+  padding: 6px;
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--main-color);
+  box-shadow: 0 0 2px #747474;
+}
+
+.delete-product {
+  background-color: tomato;
+}
+
+.submit-product {
+  background-color: lightseagreen;
 }

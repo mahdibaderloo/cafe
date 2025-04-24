@@ -255,42 +255,49 @@
         </a>
       </section>
 
-      <!-- Menu Section -->
+      <!-- Popup Section -->
       <section class="popup-section">
         <div class="popup-header">
           <p class="popup-header-title">ویرایش محصول</p>
-          <img src="Images/close.svg" alt="icon" class="icon" />
+          <img src="Images/close.svg" alt="icon" class="close-icon" />
         </div>
-        <div class="popup-main">
+        <form action="" class="popup-main">
           <div class="popup-img-box">
             <img
               src="Images/Cafe-Au-Lait-001s.jpg"
               alt="image"
               class="popup-image"
             />
-            <label for="pic" class="">افزودن عکس</label>
+            <label for="pic" class="">تغییر عکس</label>
             <input type="file" accept="image/*" name="" id="pic" hidden />
           </div>
-          <div>
-            <label for="product-title">محصول</label>
-            <input
-              id="product-title"
-              type="text"
-              class="product-title-input"
-              placeholder="نام محصول"
-            />
+          <div class="inputs">
+            <div class="input-box">
+              <input
+                id="product-title"
+                type="text"
+                class="product-title-input"
+                placeholder=" "
+                required
+              />
+              <label for="product-title">محصول</label>
+            </div>
+            <div class="input-box">
+              <input
+                id="product-price"
+                type="text"
+                class="product-price-input"
+                placeholder=" "
+                required
+              />
+              <label for="product-price">قیمت</label>
+            </div>
           </div>
-          <div>
-            <label for="product-price">قیمت</label>
-            <input
-              id="product-price"
-              type="text"
-              class="product-price-input"
-              placeholder="قیمت محصول"
-            />
+          <div class="buttons">
+            <button class="delete-product">حذف محصول</button>
+            <button class="submit-product" type="submit">تایید</button>
           </div>
-          <button class="delete-product">حذف محصول</button>
-        </div>
+        </form>
       </section>
     </div>
 
