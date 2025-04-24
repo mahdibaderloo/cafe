@@ -1,312 +1,1054 @@
+const items = [
+  // ==================
+  //     Hot Coffee
+  // ==================
 
+  {
+    id: 1,
+    category: "sadRobosta",
+    product: "اسپرسو",
+    price: 35_000,
+    disc: "یه شات عصاره قهوه",
+  },
+  {
+    id: 2,
+    category: "sadRobosta",
+    product: "اسپرسو ماکیاتو",
+    price: 40_000,
+    disc: "اسپرسو + فوم شیر",
+  },
+  {
+    id: 3,
+    category: "sadRobosta",
+    product: "کاپوچینو مخصوص",
+    price: 65_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 4,
+    category: "sadRobosta",
+    product: "کافه لاته",
+    price: 65_000,
+    disc: "اسپرسو + شیر گرم",
+  },
+  {
+    id: 5,
+    category: "sadRobosta",
+    product: "موکا",
+    price: 70_000,
+    disc: "اسپرسو + فوم شیر + سس شکلات",
+  },
+  {
+    id: 6,
+    category: "sadRobosta",
+    product: "پینک لاته",
+    price: 70_000,
+    disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
+  },
+  {
+    id: 7,
+    category: "sadRobosta",
+    product: "فندق ماکیاتو",
+    price: 70_000,
+    disc: "اسپرسو + سیروپ فندق + شیر گرم",
+  },
+  {
+    id: 8,
+    category: "sadRobosta",
+    product: "کارامل ماکیاتو",
+    price: 70_000,
+    disc: "اسپرسو + سیروپ کارامل + شیر گرم",
+  },
+  {
+    id: 9,
+    category: "sadRobosta",
+    product: "آمریکانو",
+    price: 55_000,
+    disc: "اسپرسو + آب داغ",
+  },
+  {
+    id: 10,
+    category: "sadRobosta",
+    product: "لاته وانیل",
+    price: 70_000,
+    disc: "اسپرسو + سیروپ وانیل + شیر گرم",
+  },
+  {
+    id: 11,
+    category: "sadRobosta",
+    product: "لاته دارچین عسل",
+    price: 70_000,
+    disc: "اسپرسو + دارچین + عسل + شیر گرم",
+  },
+  {
+    id: 12,
+    category: "sadRobosta",
+    product: "لاته شکلات",
+    price: 70_000,
+    disc: "اسپرسو + سیروپ شکلات + شیر گرم",
+  },
 
-// ==================
-//     Hot Coffee
-// ==================
+  {
+    id: 13,
+    category: "vaftad30Robosta",
+    product: "اسپرسو",
+    price: 40_000,
+    disc: "یه شات عصاره قهوه",
+  },
+  {
+    id: 14,
+    category: "vaftad30Robosta",
+    product: "اسپرسو ماکیاتو",
+    price: 45_000,
+    disc: "اسپرسو + فوم شیر",
+  },
+  {
+    id: 15,
+    category: "vaftad30Robosta",
+    product: "اسپرسو چاکلت لیلو",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 16,
+    category: "vaftad30Robosta",
+    product: "کاپوچینو",
+    price: 60_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 17,
+    category: "vaftad30Robosta",
+    product: "کاپوچینو مخصوص",
+    price: 70_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 18,
+    category: "vaftad30Robosta",
+    product: "کافه لاته",
+    price: 70_000,
+    disc: "اسپرسو + شیر گرم",
+  },
+  {
+    id: 19,
+    category: "vaftad30Robosta",
+    product: "موکا",
+    price: 75_000,
+    disc: "اسپرسو + فوم شیر + سس شکلات",
+  },
+  {
+    id: 20,
+    category: "vaftad30Robosta",
+    product: "پینک لاته",
+    price: 75_000,
+    disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
+  },
+  {
+    id: 21,
+    category: "vaftad30Robosta",
+    product: "فندق ماکیاتو",
+    price: 75_000,
+    disc: "اسپرسو + سیروپ فندق + شیر گرم",
+  },
+  {
+    id: 22,
+    category: "vaftad30Robosta",
+    product: "کارامل ماکیاتو",
+    price: 75_000,
+    disc: "اسپرسو + سیروپ کارامل + شیر گرم",
+  },
+  {
+    id: 23,
+    category: "vaftad30Robosta",
+    product: "آمریکانو",
+    price: 60_000,
+    disc: "اسپرسو + آب داغ",
+  },
+  {
+    id: 24,
+    category: "vaftad30Robosta",
+    product: "قهوه ترک",
+    price: 60_000,
+    disc: "پودر قهوه + آب سرد",
+  },
+  {
+    id: 25,
+    category: "vaftad30Robosta",
+    product: "قهوه عربی شکلاتی",
+    price: 65_000,
+    disc: "",
+  },
+  {
+    id: 26,
+    category: "vaftad30Robosta",
+    product: "قهوه یونانی",
+    price: 65_000,
+    disc: "پودر قهوه + شیر + شکر",
+  },
+  {
+    id: 27,
+    category: "vaftad30Robosta",
+    product: "قهوه فرانسه",
+    price: 60_000,
+    disc: "پودر قهوه + آب داغ",
+  },
+  {
+    id: 28,
+    category: "vaftad30Robosta",
+    product: "لاته وانیل",
+    price: 75_000,
+    disc: "اسپرسو + سیروپ وانیل + شیر گرم",
+  },
+  {
+    id: 29,
+    category: "vaftad30Robosta",
+    product: "لاته دارچین عسل",
+    price: 75_000,
+    disc: "اسپرسو + دارچین + عسل + شیر گرم",
+  },
+  {
+    id: 30,
+    category: "vaftad30Robosta",
+    product: "لاته شکلات",
+    price: 75_000,
+    disc: "اسپرسو + سیروپ شکلات + شیر گرم",
+  },
 
+  {
+    id: 31,
+    category: "vaftad30Arabica",
+    product: "اسپرسو",
+    price: 50_000,
+    disc: "یه شات عصاره قهوه",
+  },
+  {
+    id: 32,
+    category: "vaftad30Arabica",
+    product: "اسپرسو ماکیاتو",
+    price: 55_000,
+    disc: "اسپرسو + فوم شیر",
+  },
+  {
+    id: 33,
+    category: "vaftad30Arabica",
+    product: "کاپوچینو مخصوص",
+    price: 75_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 34,
+    category: "vaftad30Arabica",
+    product: "کافه لاته",
+    price: 75_000,
+    disc: "اسپرسو + شیر گرم",
+  },
+  {
+    id: 35,
+    category: "vaftad30Arabica",
+    product: "موکا",
+    price: 80_000,
+    disc: "اسپرسو + فوم شیر + سس شکلات",
+  },
+  {
+    id: 36,
+    category: "vaftad30Arabica",
+    product: "پینک لاته",
+    price: 80_000,
+    disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
+  },
+  {
+    id: 37,
+    category: "vaftad30Arabica",
+    product: "فندق ماکیاتو",
+    price: 80_000,
+    disc: "اسپرسو + سیروپ فندق + شیر گرم",
+  },
+  {
+    id: 38,
+    category: "vaftad30Arabica",
+    product: "کارامل ماکیاتو",
+    price: 80_000,
+    disc: "اسپرسو + سیروپ کارامل + شیر گرم",
+  },
+  {
+    id: 39,
+    category: "vaftad30Arabica",
+    product: "آمریکانو",
+    price: 65_000,
+    disc: "اسپرسو + آب داغ",
+  },
+  {
+    id: 40,
+    category: "vaftad30Arabica",
+    product: "لاته وانیل",
+    price: 80_000,
+    disc: "اسپرسو + سیروپ وانیل + شیر گرم",
+  },
+  {
+    id: 41,
+    category: "vaftad30Arabica",
+    product: "لاته دارچین عسل",
+    price: 80_000,
+    disc: "اسپرسو + دارچین + عسل + شیر گرم",
+  },
+  {
+    id: 42,
+    category: "vaftad30Arabica",
+    product: "لاته شکلات",
+    price: 80_000,
+    disc: "اسپرسو + سیروپ شکلات + شیر گرم",
+  },
 
-let sadRobosta = [
-    { id: 1, product: "اسپرسو", price: 35_000, disc: 'یه شات عصاره قهوه'},
-    { id: 2, product: "اسپرسو ماکیاتو", price: 40_000, disc: 'اسپرسو + فوم شیر'},
-    { id: 3, product: "کاپوچینو مخصوص", price: 65_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 4, product: "کافه لاته", price: 65_000, disc: 'اسپرسو + شیر گرم'},
-    { id: 5, product: "موکا", price: 70_000, disc: 'اسپرسو + فوم شیر + سس شکلات'},
-    { id: 6, product: "پینک لاته", price: 70_000, disc: 'اسپرسو + توت فرنگی فراوری شده + شیر گرم'},
-    { id: 7, product: "فندق ماکیاتو", price: 70_000, disc: 'اسپرسو + سیروپ فندق + شیر گرم'},
-    { id: 8, product: "کارامل ماکیاتو", price: 70_000, disc: 'اسپرسو + سیروپ کارامل + شیر گرم'},
-    { id: 9, product: "آمریکانو", price: 55_000, disc: 'اسپرسو + آب داغ'},
-    { id: 10, product: "لاته وانیل", price: 70_000, disc: 'اسپرسو + سیروپ وانیل + شیر گرم'},
-    { id: 11, product: "لاته دارچین عسل", price: 70_000, disc: 'اسپرسو + دارچین + عسل + شیر گرم'},
-    { id: 12, product: "لاته شکلات", price: 70_000, disc: 'اسپرسو + سیروپ شکلات + شیر گرم'},
-]
+  {
+    id: 122,
+    category: "sadArabica",
+    product: "اسپرسو",
+    price: 55_000,
+    disc: "یه شات عصاره قهوه",
+  },
+  {
+    id: 123,
+    category: "sadArabica",
+    product: "اسپرسو ماکیاتو",
+    price: 60_000,
+    disc: "اسپرسو + فوم شیر",
+  },
+  {
+    id: 124,
+    category: "sadArabica",
+    product: "کاپوچینو مخصوص",
+    price: 80_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 125,
+    category: "sadArabica",
+    product: "کافه لاته",
+    price: 80_000,
+    disc: "اسپرسو + شیر گرم",
+  },
+  {
+    id: 126,
+    category: "sadArabica",
+    product: "موکا",
+    price: 85_000,
+    disc: "اسپرسو + فوم شیر + سس شکلات",
+  },
+  {
+    id: 127,
+    category: "sadArabica",
+    product: "پینک لاته",
+    price: 85_000,
+    disc: "اسپرسو + توت فرنگی فراوری شده + شیر گرم",
+  },
+  {
+    id: 128,
+    category: "sadArabica",
+    product: "فندق ماکیاتو",
+    price: 85_000,
+    disc: "اسپرسو + سیروپ فندق + شیر گرم",
+  },
+  {
+    id: 129,
+    category: "sadArabica",
+    product: "کارامل ماکیاتو",
+    price: 85_000,
+    disc: "اسپرسو + سیروپ کارامل + شیر گرم",
+  },
+  {
+    id: 130,
+    category: "sadArabica",
+    product: "آمریکانو",
+    price: 70_000,
+    disc: "اسپرسو + آب داغ",
+  },
+  {
+    id: 131,
+    category: "sadArabica",
+    product: "لاته وانیل",
+    price: 85_000,
+    disc: "اسپرسو + سیروپ وانیل + شیر گرم",
+  },
+  {
+    id: 132,
+    category: "sadArabica",
+    product: "لاته دارچین عسل",
+    price: 85_000,
+    disc: "اسپرسو + دارچین + عسل + شیر گرم",
+  },
+  {
+    id: 133,
+    category: "sadArabica",
+    product: "لاته شکلات",
+    price: 85_000,
+    disc: "اسپرسو + سیروپ شکلات + شیر گرم",
+  },
 
-let vaftad30Robosta = [
-    { id: 13, product: "اسپرسو", price: 40_000, disc: 'یه شات عصاره قهوه'},
-    { id: 14, product: "اسپرسو ماکیاتو", price: 45_000, disc: 'اسپرسو + فوم شیر'},
-    { id: 15, product: "اسپرسو چاکلت لیلو", price: 80_000, disc: ''},
-    { id: 16, product: "کاپوچینو", price: 60_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 17, product: "کاپوچینو مخصوص", price: 70_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 18, product: "کافه لاته", price: 70_000, disc: 'اسپرسو + شیر گرم'},
-    { id: 19, product: "موکا", price: 75_000, disc: 'اسپرسو + فوم شیر + سس شکلات'},
-    { id: 20, product: "پینک لاته", price: 75_000, disc: 'اسپرسو + توت فرنگی فراوری شده + شیر گرم'},
-    { id: 21, product: "فندق ماکیاتو", price: 75_000, disc: 'اسپرسو + سیروپ فندق + شیر گرم'},
-    { id: 22, product: "کارامل ماکیاتو", price: 75_000, disc: 'اسپرسو + سیروپ کارامل + شیر گرم'},
-    { id: 23, product: "آمریکانو", price: 60_000, disc: 'اسپرسو + آب داغ'},
-    { id: 24, product: "قهوه ترک", price: 60_000, disc: 'پودر قهوه + آب سرد'},
-    { id: 25, product: "قهوه عربی شکلاتی", price: 65_000, disc: ''},
-    { id: 26, product: "قهوه یونانی", price: 65_000, disc: 'پودر قهوه + شیر + شکر'},
-    { id: 27, product: "قهوه فرانسه", price: 60_000, disc: 'پودر قهوه + آب داغ'},
-    { id: 28, product: "لاته وانیل", price: 75_000, disc: 'اسپرسو + سیروپ وانیل + شیر گرم'},
-    { id: 29, product: "لاته دارچین عسل", price: 75_000, disc: 'اسپرسو + دارچین + عسل + شیر گرم'},
-    { id: 30, product: "لاته شکلات", price: 75_000, disc: 'اسپرسو + سیروپ شکلات + شیر گرم'},
-]
+  // ==================
+  //     Hot Drink
+  // ==================
 
-let vaftad30Arabica = [
-    { id: 31, product: "اسپرسو", price: 50_000, disc: 'یه شات عصاره قهوه'},
-    { id: 32, product: "اسپرسو ماکیاتو", price: 55_000, disc: 'اسپرسو + فوم شیر'},
-    { id: 33, product: "کاپوچینو مخصوص", price: 75_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 34, product: "کافه لاته", price: 75_000, disc: 'اسپرسو + شیر گرم'},
-    { id: 35, product: "موکا", price: 80_000, disc: 'اسپرسو + فوم شیر + سس شکلات'},
-    { id: 36, product: "پینک لاته", price: 80_000, disc: 'اسپرسو + توت فرنگی فراوری شده + شیر گرم'},
-    { id: 37, product: "فندق ماکیاتو", price: 80_000, disc: 'اسپرسو + سیروپ فندق + شیر گرم'},
-    { id: 38, product: "کارامل ماکیاتو", price: 80_000, disc: 'اسپرسو + سیروپ کارامل + شیر گرم'},
-    { id: 39, product: "آمریکانو", price: 65_000, disc: 'اسپرسو + آب داغ'},
-    { id: 40, product: "لاته وانیل", price: 80_000, disc: 'اسپرسو + سیروپ وانیل + شیر گرم'},
-    { id: 41, product: "لاته دارچین عسل", price: 80_000, disc: 'اسپرسو + دارچین + عسل + شیر گرم'},
-    { id: 42, product: "لاته شکلات", price: 80_000, disc: 'اسپرسو + سیروپ شکلات + شیر گرم'},
-]
+  { id: 43, category: "hot", product: "شیر گرم", price: 55_000, disc: "" },
+  { id: 44, category: "hot", product: "شیر عسل", price: 60_000, disc: "" },
+  { id: 45, category: "hot", product: "شیر نسکوئیک", price: 65_000, disc: "" },
+  { id: 46, category: "hot", product: "شیر لوتوس", price: 75_000, disc: "" },
+  { id: 47, category: "hot", product: "هات چاکلت", price: 65_000, disc: "" },
+  { id: 48, category: "hot", product: "وایت چاکلت", price: 65_000, disc: "" },
+  { id: 49, category: "hot", product: "چای ماسالا", price: 65_000, disc: "" },
+  { id: 50, category: "hot", product: "پینک چاکلت", price: 65_000, disc: "" },
 
-let sadArabica = [
-    { id: 122, product: "اسپرسو", price: 55_000, disc: 'یه شات عصاره قهوه'},
-    { id: 123, product: "اسپرسو ماکیاتو", price: 60_000, disc: 'اسپرسو + فوم شیر'},
-    { id: 124, product: "کاپوچینو مخصوص", price: 80_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 125, product: "کافه لاته", price: 80_000, disc: 'اسپرسو + شیر گرم'},
-    { id: 126, product: "موکا", price: 85_000, disc: 'اسپرسو + فوم شیر + سس شکلات'},
-    { id: 127, product: "پینک لاته", price: 85_000, disc: 'اسپرسو + توت فرنگی فراوری شده + شیر گرم'},
-    { id: 128, product: "فندق ماکیاتو", price: 85_000, disc: 'اسپرسو + سیروپ فندق + شیر گرم'},
-    { id: 129, product: "کارامل ماکیاتو", price: 85_000, disc: 'اسپرسو + سیروپ کارامل + شیر گرم'},
-    { id: 130, product: "آمریکانو", price: 70_000, disc: 'اسپرسو + آب داغ'},
-    { id: 131, product: "لاته وانیل", price: 85_000, disc: 'اسپرسو + سیروپ وانیل + شیر گرم'},
-    { id: 132, product: "لاته دارچین عسل", price: 85_000, disc: 'اسپرسو + دارچین + عسل + شیر گرم'},
-    { id: 133, product: "لاته شکلات", price: 85_000, disc: 'اسپرسو + سیروپ شکلات + شیر گرم'},
-]
+  // ==================
+  //     Cold Coffee
+  // ==================
 
+  {
+    id: 51,
+    category: "coldCoffee_100r",
+    product: "آیس لاته",
+    price: 65_000,
+    disc: "",
+  },
+  {
+    id: 52,
+    category: "coldCoffee_100r",
+    product: "آیس آمریکانو",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 53,
+    category: "coldCoffee_100r",
+    product: "آیس فندق",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 54,
+    category: "coldCoffee_100r",
+    product: "آیس کارامل ماکیاتو",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 55,
+    category: "coldCoffee_100r",
+    product: "آیس موکا",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 56,
+    category: "coldCoffee_100r",
+    product: "کوک اسپرسو",
+    price: 65_000,
+    disc: "",
+  },
+  {
+    id: 57,
+    category: "coldCoffee_100r",
+    product: "هایپ اسپرسو",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 58,
+    category: "coldCoffee_100r",
+    product: "آفوگاتو",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 59,
+    category: "coldCoffee_100r",
+    product: "کافه گلاسه",
+    price: 90_000,
+    disc: "",
+  },
 
+  {
+    id: 60,
+    category: "coldCoffee_7030r",
+    product: "آیس لاته",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 61,
+    category: "coldCoffee_7030r",
+    product: "آیس کاپوچینو",
+    price: 65_000,
+    disc: "اسپرسو + شیر گرم + کرم خامه",
+  },
+  {
+    id: 62,
+    category: "coldCoffee_7030r",
+    product: "آیس آمریکانو",
+    price: 60_000,
+    disc: "",
+  },
+  {
+    id: 63,
+    category: "coldCoffee_7030r",
+    product: "آیس فندق",
+    price: 75_000,
+    disc: "",
+  },
+  {
+    id: 64,
+    category: "coldCoffee_7030r",
+    product: "آیس کارامل ماکیاتو",
+    price: 75_000,
+    disc: "",
+  },
+  {
+    id: 65,
+    category: "coldCoffee_7030r",
+    product: "آیس موکا",
+    price: 75_000,
+    disc: "",
+  },
+  {
+    id: 66,
+    category: "coldCoffee_7030r",
+    product: "کوک اسپرسو",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 67,
+    category: "coldCoffee_7030r",
+    product: "هایپ اسپرسو",
+    price: 85_000,
+    disc: "",
+  },
+  {
+    id: 68,
+    category: "coldCoffee_7030r",
+    product: "آفوگاتو",
+    price: 85_000,
+    disc: "",
+  },
+  {
+    id: 69,
+    category: "coldCoffee_7030r",
+    product: "کافه گلاسه",
+    price: 95_000,
+    disc: "",
+  },
+  {
+    id: 70,
+    category: "coldCoffee_7030r",
+    product: "کلد برو",
+    price: 75_000,
+    disc: "",
+  },
 
+  {
+    id: 71,
+    category: "coldCoffee_7030a",
+    product: "آیس لاته",
+    price: 75_000,
+    disc: "",
+  },
+  {
+    id: 72,
+    category: "coldCoffee_7030a",
+    product: "آیس آمریکانو",
+    price: 65_000,
+    disc: "",
+  },
+  {
+    id: 73,
+    category: "coldCoffee_7030a",
+    product: "آیس فندق",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 74,
+    category: "coldCoffee_7030a",
+    product: "آیس کارامل ماکیاتو",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 75,
+    category: "coldCoffee_7030a",
+    product: "آیس موکا",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 76,
+    category: "coldCoffee_7030a",
+    product: "کوک اسپرسو",
+    price: 75_000,
+    disc: "",
+  },
+  {
+    id: 77,
+    category: "coldCoffee_7030a",
+    product: "هایپ اسپرسو",
+    price: 90_000,
+    disc: "",
+  },
+  {
+    id: 78,
+    category: "coldCoffee_7030a",
+    product: "آفوگاتو",
+    price: 90_000,
+    disc: "",
+  },
+  {
+    id: 79,
+    category: "coldCoffee_7030a",
+    product: "کافه گلاسه",
+    price: 100_000,
+    disc: "",
+  },
 
-// ==================
-//     Hot Drink
-// ==================
+  {
+    id: 134,
+    category: "coldCoffee_100a",
+    product: "آیس لاته",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 135,
+    category: "coldCoffee_100a",
+    product: "آیس آمریکانو",
+    price: 70_000,
+    disc: "",
+  },
+  {
+    id: 136,
+    category: "coldCoffee_100a",
+    product: "آیس فندق",
+    price: 85_000,
+    disc: "",
+  },
+  {
+    id: 137,
+    category: "coldCoffee_100a",
+    product: "آیس کارامل ماکیاتو",
+    price: 85_000,
+    disc: "",
+  },
+  {
+    id: 138,
+    category: "coldCoffee_100a",
+    product: "آیس موکا",
+    price: 85_000,
+    disc: "",
+  },
+  {
+    id: 139,
+    category: "coldCoffee_100a",
+    product: "کوک اسپرسو",
+    price: 80_000,
+    disc: "",
+  },
+  {
+    id: 140,
+    category: "coldCoffee_100a",
+    product: "هایپ اسپرسو",
+    price: 95_000,
+    disc: "",
+  },
+  {
+    id: 141,
+    category: "coldCoffee_100a",
+    product: "آفوگاتو",
+    price: 95_000,
+    disc: "",
+  },
+  {
+    id: 142,
+    category: "coldCoffee_100a",
+    product: "کافه گلاسه",
+    price: 105_000,
+    disc: "",
+  },
 
+  // ==================
+  //     Shake
+  // ==================
 
-let hot = [
-    { id: 43, product: "شیر گرم", price: 55_000, disc: ''},
-    { id: 44, product: "شیر عسل", price: 60_000, disc: ''},
-    { id: 45, product: "شیر نسکوئیک", price: 65_000, disc: ''},
-    { id: 46, product: "شیر لوتوس", price: 75_000, disc: ''},
-    { id: 47, product: "هات چاکلت", price: 65_000, disc: ''},
-    { id: 48, product: "وایت چاکلت", price: 65_000, disc: ''},
-    { id: 49, product: "چای ماسالا", price: 65_000, disc: ''},
-    { id: 50, product: "پینک چاکلت", price: 65_000, disc: ''},
-]
+  { id: 80, category: "shake", product: "شیک وانیل", price: 95_000, disc: "" },
+  { id: 81, category: "shake", product: "شیک نوتلا", price: 110_000, disc: "" },
+  { id: 82, category: "shake", product: "شیک قهوه", price: 105_000, disc: "" },
+  {
+    id: 83,
+    category: "shake",
+    product: "شیک بادام زمینی",
+    price: 105_000,
+    disc: "",
+  },
+  { id: 84, category: "shake", product: "شیک لوتوس", price: 110_000, disc: "" },
+  {
+    id: 85,
+    category: "shake",
+    product: "شیک چاکلت براونی",
+    price: 110_000,
+    disc: "",
+  },
+  {
+    id: 86,
+    category: "shake",
+    product: "شیک چانکی مانکی",
+    price: 110_000,
+    disc: "",
+  },
+  {
+    id: 87,
+    category: "shake",
+    product: "شیک موز شکلات",
+    price: 110_000,
+    disc: "",
+  },
+  {
+    id: 88,
+    category: "shake",
+    product: "شیک موز توت فرنگی",
+    price: 110_000,
+    disc: "",
+  },
+  {
+    id: 89,
+    category: "shake",
+    product: "شیک موز لوتوس",
+    price: 120_000,
+    disc: "",
+  },
+  {
+    id: 90,
+    category: "shake",
+    product: "شیک موز نوتلا",
+    price: 120_000,
+    disc: "",
+  },
+  {
+    id: 91,
+    category: "shake",
+    product: "شیک نوستالژی",
+    price: 105_000,
+    disc: "",
+  },
+  {
+    id: 92,
+    category: "shake",
+    product: "شیک مخصوص لیلو",
+    price: 125_000,
+    disc: "",
+  },
 
+  // ==================
+  //     Cold Drink
+  // ==================
 
+  { id: 93, category: "cold", product: "لیموناد", price: 65_000, disc: "" },
+  {
+    id: 94,
+    category: "cold",
+    product: "لیموناد توت فرنگی",
+    price: 70_000,
+    disc: "",
+  },
+  { id: 95, category: "cold", product: "بلو هاوایی", price: 75_000, disc: "" },
+  { id: 96, category: "cold", product: "کوکوپاین", price: 75_000, disc: "" },
+  { id: 97, category: "cold", product: "لوکا", price: 75_000, disc: "" },
+  {
+    id: 98,
+    category: "cold",
+    product: "اسپایسی ماکتل",
+    price: 75_000,
+    disc: "",
+  },
+  { id: 99, category: "cold", product: "موهیتو", price: 75_000, disc: "" },
+  {
+    id: 100,
+    category: "cold",
+    product: "موهیتو توت فرنگی",
+    price: 80_000,
+    disc: "",
+  },
 
+  // ==================
+  //     Cake & Coocki
+  // ==================
 
-// ==================
-//     Cold Coffee
-// ==================
+  { id: 101, category: "cake", product: "کیک روز", price: 70_000, disc: "" },
+  { id: 102, category: "cake", product: "کیک بستنی", price: 80_000, disc: "" },
+  { id: 103, category: "cake", product: "کوکی", price: 35_000, disc: "" },
+  { id: 104, category: "cake", product: "موچی", price: 65_000, disc: "" },
+  { id: 105, category: "cake", product: "کروسان", price: 60_000, disc: "" },
 
+  // ==================
+  //     Snack
+  // ==================
 
-let coldCoffee_100r = [
-    { id: 51, product: "آیس لاته", price: 65_000, disc: ''},
-    { id: 52, product: "آیس آمریکانو", price: 55_000, disc: ''},
-    { id: 53, product: "آیس فندق", price: 70_000, disc: ''},
-    { id: 54, product: "آیس کارامل ماکیاتو", price: 70_000, disc: ''},
-    { id: 55, product: "آیس موکا", price: 70_000, disc: ''},
-    { id: 56, product: "کوک اسپرسو", price: 65_000, disc: ''},
-    { id: 57, product: "هایپ اسپرسو", price: 80_000, disc: ''},
-    { id: 58, product: "آفوگاتو", price: 80_000, disc: ''},
-    { id: 59, product: "کافه گلاسه", price: 90_000, disc: ''},
-]
+  {
+    id: 106,
+    category: "snack",
+    product: "تست کره بادام زمینی",
+    price: 55_000,
+    disc: "",
+  },
+  { id: 107, category: "snack", product: "تست نوتلا", price: 65_000, disc: "" },
+  {
+    id: 108,
+    category: "snack",
+    product: "اسنک مخصوص لیلو",
+    price: 90_000,
+    disc: "",
+  },
+  {
+    id: 109,
+    category: "snack",
+    product: "چیپس و پنیر",
+    price: 100_000,
+    disc: "",
+  },
+  {
+    id: 110,
+    category: "snack",
+    product: "چیپس و پنیر مخصوص",
+    price: 115_000,
+    disc: "",
+  },
 
-let coldCoffee_7030r = [
-    { id: 60, product: "آیس لاته", price: 70_000, disc: ''},
-    { id: 61, product: "آیس کاپوچینو", price: 65_000, disc: 'اسپرسو + شیر گرم + کرم خامه'},
-    { id: 62, product: "آیس آمریکانو", price: 60_000, disc: ''},
-    { id: 63, product: "آیس فندق", price: 75_000, disc: ''},
-    { id: 64, product: "آیس کارامل ماکیاتو", price: 75_000, disc: ''},
-    { id: 65, product: "آیس موکا", price: 75_000, disc: ''},
-    { id: 66, product: "کوک اسپرسو", price: 70_000, disc: ''},
-    { id: 67, product: "هایپ اسپرسو", price: 85_000, disc: ''},
-    { id: 68, product: "آفوگاتو", price: 85_000, disc: ''},
-    { id: 69, product: "کافه گلاسه", price: 95_000, disc: ''},
-    { id: 70, product: "کلد برو", price: 75_000, disc: ''},
-]
+  // ==================
+  //     Tea
+  // ==================
 
-let coldCoffee_7030a = [
-    { id: 71, product: "آیس لاته", price: 75_000, disc: ''},
-    { id: 72, product: "آیس آمریکانو", price: 65_000, disc: ''},
-    { id: 73, product: "آیس فندق", price: 80_000, disc: ''},
-    { id: 74, product: "آیس کارامل ماکیاتو", price: 80_000, disc: ''},
-    { id: 75, product: "آیس موکا", price: 80_000, disc: ''},
-    { id: 76, product: "کوک اسپرسو", price: 75_000, disc: ''},
-    { id: 77, product: "هایپ اسپرسو", price: 90_000, disc: ''},
-    { id: 78, product: "آفوگاتو", price: 90_000, disc: ''},
-    { id: 79, product: "کافه گلاسه", price: 100_000, disc: ''},
-]
+  { id: 111, category: "tea_1", product: "چای داغ", price: 35_000, disc: "" },
+  {
+    id: 112,
+    category: "tea_1",
+    product: "چای دارچین",
+    price: 37_000,
+    disc: "",
+  },
+  {
+    id: 113,
+    category: "tea_1",
+    product: "چای دارچین عسل",
+    price: 40_000,
+    disc: "",
+  },
+  { id: 114, category: "tea_1", product: "چای سبز", price: 40_000, disc: "" },
+  { id: 115, category: "tea_1", product: "چای ترش", price: 40_000, disc: "" },
+  {
+    id: 116,
+    category: "tea_1",
+    product: "دمنوش سرماخوردگی",
+    price: 50_000,
+    disc: "",
+  },
+  {
+    id: 117,
+    category: "tea_1",
+    product: "دمنوش گل گاو زبان",
+    price: 50_000,
+    disc: "",
+  },
+  {
+    id: 118,
+    category: "tea_1",
+    product: "دمنوش هل و بهار نارنج",
+    price: 50_000,
+    disc: "",
+  },
+  {
+    id: 119,
+    category: "tea_1",
+    product: "دمنوش به لیمو گلمحمدی",
+    price: 50_000,
+    disc: "",
+  },
+  {
+    id: 120,
+    category: "tea_1",
+    product: "دمنوش زنجبیل",
+    price: 50_000,
+    disc: "",
+  },
+  {
+    id: 121,
+    category: "tea_1",
+    product: "دمنوش دارچین",
+    price: 50_000,
+    disc: "",
+  },
 
-let coldCoffee_100a = [
-    { id: 134, product: "آیس لاته", price: 80_000, disc: ''},
-    { id: 135, product: "آیس آمریکانو", price: 70_000, disc: ''},
-    { id: 136, product: "آیس فندق", price: 85_000, disc: ''},
-    { id: 137, product: "آیس کارامل ماکیاتو", price: 85_000, disc: ''},
-    { id: 138, product: "آیس موکا", price: 85_000, disc: ''},
-    { id: 139, product: "کوک اسپرسو", price: 80_000, disc: ''},
-    { id: 140, product: "هایپ اسپرسو", price: 95_000, disc: ''},
-    { id: 141, product: "آفوگاتو", price: 95_000, disc: ''},
-    { id: 142, product: "کافه گلاسه", price: 105_000, disc: ''},
-]
+  { id: 157, category: "tea_2", product: "چای داغ", price: 40_000, disc: "" },
+  {
+    id: 158,
+    category: "tea_2",
+    product: "چای دارچین",
+    price: 42_000,
+    disc: "",
+  },
+  {
+    id: 159,
+    category: "tea_2",
+    product: "چای دارچین عسل",
+    price: 45_000,
+    disc: "",
+  },
+  { id: 160, category: "tea_2", product: "چای سبز", price: 45_000, disc: "" },
+  { id: 161, category: "tea_2", product: "چای ترش", price: 45_000, disc: "" },
+  {
+    id: 162,
+    category: "tea_2",
+    product: "دمنوش سرماخوردگی",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 163,
+    category: "tea_2",
+    product: "دمنوش گل گاو زبان",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 164,
+    category: "tea_2",
+    product: "دمنوش هل و بهار نارنج",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 165,
+    category: "tea_2",
+    product: "دمنوش به لیمو گلمحمدی",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 166,
+    category: "tea_2",
+    product: "دمنوش زنجبیل",
+    price: 55_000,
+    disc: "",
+  },
+  {
+    id: 167,
+    category: "tea_2",
+    product: "دمنوش دارچین",
+    price: 55_000,
+    disc: "",
+  },
 
+  // ==================
+  //     Bubble Tea
+  // ==================
 
-
-
-// ==================
-//     Shake
-// ==================
-
-
-let shake = [
-    { id: 80, product: "شیک وانیل", price: 95_000, disc: ''},
-    { id: 81, product: "شیک نوتلا", price: 110_000, disc: ''},
-    { id: 82, product: "شیک قهوه", price: 105_000, disc: ''},
-    { id: 83, product: "شیک بادام زمینی", price: 105_000, disc: ''},
-    { id: 84, product: "شیک لوتوس", price: 110_000, disc: ''},
-    { id: 85, product: "شیک چاکلت براونی", price: 110_000, disc: ''},
-    { id: 86, product: "شیک چانکی مانکی", price: 110_000, disc: ''},
-    { id: 87, product: "شیک موز شکلات", price: 110_000, disc: ''},
-    { id: 88, product: "شیک موز توت فرنگی", price: 110_000, disc: ''},
-    { id: 89, product: "شیک موز لوتوس", price: 120_000, disc: ''},
-    { id: 90, product: "شیک موز نوتلا", price: 120_000, disc: ''},
-    { id: 91, product: "شیک نوستالژی", price: 105_000, disc: ''},
-    { id: 92, product: "شیک مخصوص لیلو", price: 125_000, disc: ''},
-]
-
-
-
-
-// ==================
-//     Cold Drink
-// ==================
-
-
-let cold = [
-    { id: 93, product: "لیموناد", price: 65_000, disc: ''},
-    { id: 94, product: "لیموناد توت فرنگی", price: 70_000, disc: ''},
-    { id: 95, product: "بلو هاوایی", price: 75_000, disc: ''},
-    { id: 96, product: "کوکوپاین", price: 75_000, disc: ''},
-    { id: 97, product: "لوکا", price: 75_000, disc: ''},
-    { id: 98, product: "اسپایسی ماکتل", price: 75_000, disc: ''},
-    { id: 99, product: "موهیتو", price: 75_000, disc: ''},
-    { id: 100, product: "موهیتو توت فرنگی", price: 80_000, disc: ''},
-]
-
-
-
-
-// ==================
-//     Cake & Coocki
-// ==================
-
-
-let cake = [
-    { id: 101, product: "کیک روز", price: 70_000, disc: ''},
-    { id: 102, product: "کیک بستنی", price: 80_000, disc: ''},
-    { id: 103, product: "کوکی", price: 35_000, disc: ''},
-    { id: 104, product: "موچی", price: 65_000, disc: ''},
-    { id: 105, product: "کروسان", price: 60_000, disc: ''},
-]
-
-
-
-
-// ==================
-//     Snack
-// ==================
-
-
-let snack = [
-    { id: 106, product: "تست کره بادام زمینی", price: 55_000, disc: ''},
-    { id: 107, product: "تست نوتلا", price: 65_000, disc: ''},
-    { id: 108, product: "اسنک مخصوص لیلو", price: 90_000, disc: ''},
-    { id: 109, product: "چیپس و پنیر", price: 100_000, disc: ''},
-    { id: 110, product: "چیپس و پنیر مخصوص", price: 115_000, disc: ''},
-]
-
-
-
-
-// ==================
-//     Tea
-// ==================
-
-
-let tea_1 = [
-    { id: 111, product: "چای داغ", price: 35_000, disc: ''},
-    { id: 112, product: "چای دارچین", price: 37_000, disc: ''},
-    { id: 113, product: "چای دارچین عسل", price: 40_000, disc: ''},
-    { id: 114, product: "چای سبز", price: 40_000, disc: ''},
-    { id: 115, product: "چای ترش", price: 40_000, disc: ''},
-    { id: 116, product: "دمنوش سرماخوردگی", price: 50_000, disc: ''},
-    { id: 117, product: "دمنوش گل گاو زبان", price: 50_000, disc: ''},
-    { id: 118, product: "دمنوش هل و بهار نارنج", price: 50_000, disc: ''},
-    { id: 119, product: "دمنوش به لیمو گلمحمدی", price: 50_000, disc: ''},
-    { id: 120, product: "دمنوش زنجبیل", price: 50_000, disc: ''},
-    { id: 121, product: "دمنوش دارچین", price: 50_000, disc: ''},
-]
-
-let tea_2 = [
-    { id: 157, product: "چای داغ", price: 40_000, disc: ''},
-    { id: 158, product: "چای دارچین", price: 42_000, disc: ''},
-    { id: 159, product: "چای دارچین عسل", price: 45_000, disc: ''},
-    { id: 160, product: "چای سبز", price: 45_000, disc: ''},
-    { id: 161, product: "چای ترش", price: 45_000, disc: ''},
-    { id: 162, product: "دمنوش سرماخوردگی", price: 55_000, disc: ''},
-    { id: 163, product: "دمنوش گل گاو زبان", price: 55_000, disc: ''},
-    { id: 164, product: "دمنوش هل و بهار نارنج", price: 55_000, disc: ''},
-    { id: 165, product: "دمنوش به لیمو گلمحمدی", price: 55_000, disc: ''},
-    { id: 166, product: "دمنوش زنجبیل", price: 55_000, disc: ''},
-    { id: 167, product: "دمنوش دارچین", price: 55_000, disc: ''},
-]
-
-
-
-
-// ==================
-//     Bubble Tea
-// ==================
-
-
-let bubbleTea = [
-    { id: 143, product: "شیک اسپرسو بوبا", price: 130_000, disc: ''},
-    { id: 144, product: "شیک نوتلا بوبا", price: 135_000, disc: ''},
-    { id: 145, product: "شیک نوتلا موز بوبا", price: 145_000, disc: ''},
-    { id: 146, product: "شیک لوتوس بوبا", price: 135_000, disc: ''},
-    { id: 147, product: "شیک لوتوس موز بوبا", price: 145_000, disc: ''},
-    { id: 148, product: "شیک توت فرنگی بوبا", price: 130_000, disc: ''},
-    { id: 149, product: "شیک مخصوص بوبا", price: 160_000, disc: ''},
-    { id: 150, product: "آیس کافی بوبا", price: 100_000, disc: ''},
-    { id: 151, product: "آیس موکا بوبا", price: 105_000, disc: ''},
-    { id: 152, product: "آیس موکا فندقی بوبا", price: 110_000, disc: ''},
-    { id: 153, product: "آیس کارامل ماکیاتو بوبا", price: 105_000, disc: ''},
-    { id: 154, product: "آیس وانیل بوبا", price: 105_000, disc: ''},
-    { id: 155, product: "آیس پیناکولادا بوبا", price: 105_000, disc: ''},
-    { id: 156, product: "آیس توت فرنگی بوبا", price: 105_000, disc: ''},
-]
-
-
+  {
+    id: 143,
+    category: "bubbleTea",
+    product: "شیک اسپرسو بوبا",
+    price: 130_000,
+    disc: "",
+  },
+  {
+    id: 144,
+    category: "bubbleTea",
+    product: "شیک نوتلا بوبا",
+    price: 135_000,
+    disc: "",
+  },
+  {
+    id: 145,
+    category: "bubbleTea",
+    product: "شیک نوتلا موز بوبا",
+    price: 145_000,
+    disc: "",
+  },
+  {
+    id: 146,
+    category: "bubbleTea",
+    product: "شیک لوتوس بوبا",
+    price: 135_000,
+    disc: "",
+  },
+  {
+    id: 147,
+    category: "bubbleTea",
+    product: "شیک لوتوس موز بوبا",
+    price: 145_000,
+    disc: "",
+  },
+  {
+    id: 148,
+    category: "bubbleTea",
+    product: "شیک توت فرنگی بوبا",
+    price: 130_000,
+    disc: "",
+  },
+  {
+    id: 149,
+    category: "bubbleTea",
+    product: "شیک مخصوص بوبا",
+    price: 160_000,
+    disc: "",
+  },
+  {
+    id: 150,
+    category: "bubbleTea",
+    product: "آیس کافی بوبا",
+    price: 100_000,
+    disc: "",
+  },
+  {
+    id: 151,
+    category: "bubbleTea",
+    product: "آیس موکا بوبا",
+    price: 105_000,
+    disc: "",
+  },
+  {
+    id: 152,
+    category: "bubbleTea",
+    product: "آیس موکا فندقی بوبا",
+    price: 110_000,
+    disc: "",
+  },
+  {
+    id: 153,
+    category: "bubbleTea",
+    product: "آیس کارامل ماکیاتو بوبا",
+    price: 105_000,
+    disc: "",
+  },
+  {
+    id: 154,
+    category: "bubbleTea",
+    product: "آیس وانیل بوبا",
+    price: 105_000,
+    disc: "",
+  },
+  {
+    id: 155,
+    category: "bubbleTea",
+    product: "آیس پیناکولادا بوبا",
+    price: 105_000,
+    disc: "",
+  },
+  {
+    id: 156,
+    category: "bubbleTea",
+    product: "آیس توت فرنگی بوبا",
+    price: 105_000,
+    disc: "",
+  },
+];
 
 // ###############################
 //         Last ID : 167
 // ###############################
 
-
-
-export {
-    sadRobosta,
-    vaftad30Robosta,
-    vaftad30Arabica,
-    sadArabica,
-    hot,
-    coldCoffee_100r,
-    coldCoffee_7030r,
-    coldCoffee_7030a,
-    coldCoffee_100a,
-    shake,
-    cold,
-    cake,
-    snack,
-    tea_1,
-    tea_2 ,
-    bubbleTea
-} 
+export default items;
