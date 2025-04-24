@@ -1,21 +1,4 @@
-import {
-  sadRobosta,
-  vaftad30Robosta,
-  vaftad30Arabica,
-  sadArabica,
-  hot,
-  coldCoffee_100r,
-  coldCoffee_7030r,
-  coldCoffee_7030a,
-  coldCoffee_100a,
-  shake,
-  cold,
-  cake,
-  snack,
-  tea_1,
-  tea_2,
-  bubbleTea,
-} from "../Scripts/db.js";
+import items from "./db.js";
 
 const headerTitle = document.querySelector(".header-title");
 const menu = document.querySelector(".menu-section");
@@ -88,22 +71,22 @@ categories.forEach((category) => {
   category.addEventListener("click", (e) => {
     switch (e.target.dataset.item) {
       case "cold-drink":
-        generateItems(cold);
+        generateItems("cold");
         break;
       case "hot-drink":
-        generateItems(hot);
+        generateItems("hot");
         break;
       case "shake":
-        generateItems(shake);
+        generateItems("shake");
         break;
       case "cake":
-        generateItems(cake);
+        generateItems("cake");
         break;
       case "snack":
-        generateItems(snack);
+        generateItems("snack");
         break;
       case "bubble-tea":
-        generateItems(bubbleTea);
+        generateItems("bubbleTea");
         break;
       case "hot-coffee":
         selectLine("hot-coffee");
@@ -128,32 +111,32 @@ function selectLine(data) {
       if (data === "hot-coffee") {
         switch (e.target.dataset.line) {
           case "100r":
-            generateItems(sadRobosta);
+            generateItems("sadRobosta");
             break;
           case "7030r":
-            generateItems(vaftad30Robosta);
+            generateItems("vaftad30Robosta");
             break;
           case "100a":
-            generateItems(sadArabica);
+            generateItems("sadArabica");
             break;
           case "7030a":
-            generateItems(vaftad30Arabica);
+            generateItems("vaftad30Arabica");
             break;
         }
       }
       if (data === "cold-coffee") {
         switch (e.target.dataset.line) {
           case "100r":
-            generateItems(coldCoffee_100r);
+            generateItems("coldCoffee_100r");
             break;
           case "7030r":
-            generateItems(coldCoffee_7030r);
+            generateItems("coldCoffee_7030r");
             break;
           case "100a":
-            generateItems(coldCoffee_100a);
+            generateItems("coldCoffee_100a");
             break;
           case "7030a":
-            generateItems(coldCoffee_7030a);
+            generateItems("coldCoffee_7030a");
             break;
         }
       }
@@ -181,10 +164,12 @@ function selectTeaGlass(data) {
   });
 }
 
-function generateItems(items) {
+function generateItems(data) {
   ProductsSection.style.display = "block";
   ProductsWrapper.innerHTML = "";
-  items.forEach((item) => {
+
+  let selectedItems = items.filter((item) => item.category === data);
+  selectedItems.forEach((item) => {
     ProductsWrapper.insertAdjacentHTML(
       "beforeend",
       `<li class="product" onclick=(editProduct(${item.id}))>
