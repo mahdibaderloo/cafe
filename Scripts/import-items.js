@@ -156,25 +156,20 @@ function createListItems(data) {
         item.disc
       }</p></div></div><div class="item-bottom"><p class="item-price">${item.price.toLocaleString(
         "EN"
-      )}</p><button class="item-btn" onclick="updateProductsArray('${
-        item.product
-      }' , ${item.price}, ${item.id})">افزودن به سفارشات</button></div></li>`
+      )}</p><button class="item-btn" onclick="updateProductsArray(${
+        item.id
+      })">افزودن به سفارشات</button></div></li>`
     );
   });
 }
 
-function updateProductsArray(title, price, id) {
+function updateProductsArray(id) {
   products.innerHTML = "";
 
-  let newItem = {
-    id: id,
-    title: title,
-    price: Number(price),
-    count: 1,
-  };
+  let selectedItem = items.filter((item) => item.id === id);
 
   if (!productsContent.find((item) => item.id === id)) {
-    productsContent.push(newItem);
+    productsContent.push(selectedItem[0]);
 
     const Toast = Swal.mixin({
       toast: true,
@@ -188,7 +183,7 @@ function updateProductsArray(title, price, id) {
     });
     Toast.fire({
       icon: "success",
-      title: `${title} به سبد خرید اضافه شد`,
+      title: `${selectedItem[0].product} به سبد خرید اضافه شد`,
       iconColor: "#351f08",
     });
   }
