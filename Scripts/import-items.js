@@ -206,13 +206,15 @@ function getItemsInLocalStorage() {
   return productsContent;
 }
 
-function addToCart(itemsWrapper) {
-  itemsWrapper.forEach((item) => {
-    let newCartItem = `
+function addToCart(data) {
+  data.forEach((item) => {
+    products.insertAdjacentHTML(
+      "beforeend",
+      `
             <li class="product">
             <div class="product-right-content">
                 <img src="Images/Cafe-Au-Lait-001s.jpg" alt="" class="product-img">
-                <h3 class="product-title">${item.title}</h3>
+                <h3 class="product-title">${item.product}</h3>
             </div>
             <div class="product-left-content">
                 <div class="product-count">
@@ -228,9 +230,8 @@ function addToCart(itemsWrapper) {
                   "EN"
                 )}</h3>
             </div>
-            </li>`;
-
-    products.insertAdjacentHTML("beforeend", newCartItem);
+            </li>`
+    );
   });
   totalPriceCount();
   // changeCartLight()
