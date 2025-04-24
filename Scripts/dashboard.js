@@ -187,7 +187,7 @@ function generateItems(items) {
   items.forEach((item) => {
     ProductsWrapper.insertAdjacentHTML(
       "beforeend",
-      `<li class="product">
+      `<li class="product" onclick=(editProduct(${item.id}))>
             <img
               src="Images/Cafe-Au-Lait-001s.jpg"
               alt="pic"
@@ -205,6 +205,10 @@ function generateItems(items) {
 function backToCategories() {
   ProductsSection.style.display = "none";
   CategoriesSection.style.display = "flex";
+}
+
+function editProduct(id) {
+  console.log(id);
 }
 
 window.addEventListener("click", (e) => {
@@ -227,3 +231,4 @@ window.addEventListener("hashchange", () => {
 });
 
 window.backToCategories = backToCategories;
+window.editProduct = editProduct;
