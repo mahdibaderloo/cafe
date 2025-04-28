@@ -14,6 +14,7 @@ const linesSection = document.querySelector(".lines-section");
 const lines = document.querySelectorAll(".line-link");
 const teaGlassesSection = document.querySelector(".tea-glasses-section");
 const glasses = document.querySelectorAll(".glass");
+const popupSection = document.querySelector(".popup-section");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -193,7 +194,7 @@ function backToCategories() {
 }
 
 function editProduct(id) {
-  console.log(id);
+  popupSection.style.display = "block";
 }
 
 window.addEventListener("click", (e) => {
