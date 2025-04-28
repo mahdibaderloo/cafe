@@ -95,7 +95,7 @@ categories.forEach((category) => {
         selectLine("cold-coffee");
         break;
       case "tea":
-        selectTeaGlass("tea");
+        selectTeaGlass();
         break;
     }
     CategoriesSection.style.display = "none";
@@ -145,7 +145,7 @@ function selectLine(data) {
   });
 }
 
-function selectTeaGlass(data) {
+function selectTeaGlass() {
   teaGlassesSection.style.display = "flex";
 
   glasses.forEach((glass) => {
@@ -153,10 +153,10 @@ function selectTeaGlass(data) {
       e.preventDefault();
       switch (e.target.dataset.line) {
         case "tea-1":
-          generateItems(tea_1);
+          generateItems("tea_1");
           break;
         case "tea-2":
-          generateItems(tea_2);
+          generateItems("tea_2");
           break;
       }
       teaGlassesSection.style.display = "none";
