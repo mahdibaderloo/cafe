@@ -1,5 +1,6 @@
 import items from "./db.js";
 
+const container = document.querySelector(".container");
 const headerTitle = document.querySelector(".header-title");
 const menu = document.querySelector(".menu-section");
 const menuIcon = document.querySelector(".menu-icon");
@@ -197,6 +198,8 @@ function backToCategories() {
 
 function editProduct(id) {
   popupSection.style.display = "block";
+  container.style.filter = "blur(10px)";
+  container.style.pointerEvents = "none";
 
   let selectedItem = items.filter((item) => item.id === id);
 
@@ -206,6 +209,8 @@ function editProduct(id) {
 
 function closePopup() {
   popupSection.style.display = "none";
+  container.style.filter = "blur(0px)";
+  container.style.pointerEvents = "unset";
 }
 
 window.addEventListener("click", (e) => {
