@@ -227,9 +227,10 @@ function addToCart(data) {
                       item.id
                     })">-</span>
                 </div>
-                <h3 class="product-price">${item.price.toLocaleString(
-                  "EN"
-                )}</h3>
+                <h3 class="product-price">${(item.count
+                  ? item.price * item.count
+                  : item.price
+                ).toLocaleString("EN")}</h3>
             </div>
             </li>`
     );
@@ -260,6 +261,7 @@ function changePrice(el, id) {
   let prePriceElement =
     el.parentElement.parentElement.querySelector(".product-price");
   let finalPrice = selectedItem[0].price * selectedItem[0].count;
+  console.log(finalPrice);
   prePriceElement.innerHTML = finalPrice.toLocaleString("EN");
 
   setItemsInLocalStorage(productsContent);
