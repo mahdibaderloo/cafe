@@ -15,6 +15,8 @@ const lines = document.querySelectorAll(".line-link");
 const teaGlassesSection = document.querySelector(".tea-glasses-section");
 const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
+const productTitleInput = document.querySelector(".product-title-input");
+const productPriceInput = document.querySelector(".product-price-input");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -195,6 +197,11 @@ function backToCategories() {
 
 function editProduct(id) {
   popupSection.style.display = "block";
+
+  let selectedItem = items.filter((item) => item.id === id);
+
+  productTitleInput.value = selectedItem[0].product;
+  productPriceInput.value = selectedItem[0].price;
 }
 
 function closePopup() {
