@@ -36,10 +36,10 @@ category.forEach((item) => {
           itemsWrapper.innerHTML = "";
 
           if (event.target.dataset.line === "tea-1") {
-            createListItems("tea-1");
+            createListItems("tea_1");
           }
           if (event.target.dataset.line === "tea-2") {
-            createListItems("tea-2");
+            createListItems("tea_2");
           }
         });
       });
