@@ -197,6 +197,10 @@ function editProduct(id) {
   popupSection.style.display = "block";
 }
 
+function closePopup() {
+  popupSection.style.display = "none";
+}
+
 window.addEventListener("click", (e) => {
   if (
     e.target.className !== "menu" &&
@@ -218,3 +222,4 @@ window.addEventListener("hashchange", () => {
 
 window.backToCategories = backToCategories;
 window.editProduct = editProduct;
+window.closePopup = closePopup;
