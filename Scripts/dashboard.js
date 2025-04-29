@@ -222,6 +222,10 @@ function deleteProduct(el) {
   console.log(el.parentElement.id);
 }
 
+function submitChanges(el) {
+  console.log(el.parentElement.id);
+}
+
 window.addEventListener("click", (e) => {
   if (
     e.target.className !== "menu" &&
@@ -245,3 +249,4 @@ window.backToCategories = backToCategories;
 window.editProduct = editProduct;
 window.closePopup = closePopup;
 window.deleteProduct = deleteProduct;
+window.submitChanges = submitChanges;
