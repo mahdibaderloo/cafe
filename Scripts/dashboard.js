@@ -18,6 +18,7 @@ const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
 const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
+const buttons = document.querySelector(".buttons");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -203,6 +204,8 @@ function editProduct(id) {
 
   let selectedItem = items.filter((item) => item.id === id);
 
+  buttons.id = id;
+
   productTitleInput.value = selectedItem[0].product;
   productPriceInput.value = selectedItem[0].price;
 }
@@ -211,6 +214,10 @@ function closePopup() {
   popupSection.style.display = "none";
   container.style.filter = "blur(0px)";
   container.style.pointerEvents = "unset";
+}
+
+function deleteProduct(el) {
+  console.log(el.parentElement.id);
 }
 
 window.addEventListener("click", (e) => {
@@ -235,3 +242,4 @@ window.addEventListener("hashchange", () => {
 window.backToCategories = backToCategories;
 window.editProduct = editProduct;
 window.closePopup = closePopup;
+window.deleteProduct = deleteProduct;
