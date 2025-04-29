@@ -200,7 +200,7 @@ function backToCategories() {
 }
 
 function editProduct(id) {
-  popupSection.style.display = "block";
+  popupSection.style.display = "flex";
   container.style.filter = "blur(10px)";
   container.style.pointerEvents = "none";
 

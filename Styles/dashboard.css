@@ -456,6 +456,8 @@ body {
 
 .popup-section {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   width: 90%;
   height: 500px;
   padding: 14px;
@@ -521,6 +523,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .input-box {
