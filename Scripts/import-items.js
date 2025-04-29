@@ -153,7 +153,7 @@ function createListItems(data) {
       `<li class="item"><div class="item-top"><img class="item-img" src="Images/Cafe-Au-Lait-001s.jpg" alt=""><div class="item__content"><h3 class="item-title">${
         item.product
       }</h3><p class="item-desc">${
-        item.disc
+        item.desc
       }</p></div></div><div class="item-bottom"><p class="item-price">${item.price.toLocaleString(
         "EN"
       )}</p><button class="item-btn" onclick="updateProductsArray(${

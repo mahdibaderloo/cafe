@@ -18,6 +18,7 @@ const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
 const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
+const productDescInput = document.querySelector(".product-desc-input");
 const buttons = document.querySelector(".buttons");
 
 menuIcon.addEventListener("click", () => {
@@ -208,6 +209,7 @@ function editProduct(id) {
 
   productTitleInput.value = selectedItem[0].product;
   productPriceInput.value = selectedItem[0].price;
+  productDescInput.value = selectedItem[0].desc ? selectedItem[0].desc : "";
 }
 
 function closePopup() {
