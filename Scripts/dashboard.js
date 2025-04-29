@@ -16,6 +16,7 @@ const lines = document.querySelectorAll(".line-link");
 const teaGlassesSection = document.querySelector(".tea-glasses-section");
 const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
+const popupImage = document.querySelector(".popup-image");
 const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
 const productDescInput = document.querySelector(".product-desc-input");
@@ -180,7 +181,7 @@ function generateItems(data) {
       "beforeend",
       `<li class="product" onclick=(editProduct(${item.id}))>
             <img
-              src="Images/Cafe-Au-Lait-001s.jpg"
+              src=${item.image}
               alt="pic"
               class="product-img"
             />
@@ -209,6 +210,7 @@ function editProduct(id) {
 
   productTitleInput.value = selectedItem[0].product;
   productPriceInput.value = selectedItem[0].price;
+  popupImage.src = selectedItem[0].image;
   productDescInput.value = selectedItem[0].desc ? selectedItem[0].desc : "";
 }
 
