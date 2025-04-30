@@ -529,7 +529,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .input-box {
