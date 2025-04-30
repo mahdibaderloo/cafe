@@ -21,6 +21,8 @@ const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
 const productDescInput = document.querySelector(".product-desc-input");
 const buttons = document.querySelector(".buttons");
+const profilePopupSection = document.querySelector(".profile-popup-section");
+const editProfileBtn = document.querySelector(".edit-profile-btn");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -216,6 +218,7 @@ function editProduct(id) {
 
 function closePopup() {
   popupSection.style.display = "none";
+  profilePopupSection.style.display = "none";
   container.style.filter = "blur(0px)";
   container.style.pointerEvents = "unset";
 }
@@ -227,6 +230,12 @@ function deleteProduct(el) {
 function submitChanges(el) {
   console.log(el.parentElement.id);
 }
+
+editProfileBtn.addEventListener("click", () => {
+  profilePopupSection.style.display = "flex";
+  container.style.filter = "blur(10px)";
+  container.style.pointerEvents = "none";
+});
 
 window.addEventListener("click", (e) => {
   if (
