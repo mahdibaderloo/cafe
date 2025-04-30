@@ -316,6 +316,58 @@
       </form>
     </section>
 
+    <!-- Profile Popup -->
+    <section class="profile-popup-section">
+      <div class="popup-header">
+        <p class="popup-header-title">ویرایش پروفایل</p>
+        <img
+          src="Images/close.svg"
+          alt="icon"
+          class="close-icon"
+          onclick="closePopup()"
+        />
+      </div>
+      <form action="" class="profile-popup-main">
+        <div class="profile-image-box">
+          <img src="Images/profile.svg" alt="" class="profile-image" />
+          <label for="pic" class="">تغییر عکس</label>
+          <input type="file" accept="image/*" name="" id="pic" hidden />
+        </div>
+        <div class="inputs">
+          <div class="input-box">
+            <input
+              id="profile-username"
+              type="text"
+              class="profile-username-input"
+              placeholder=" "
+              required
+            />
+            <label for="profile-username">نام کاربری</label>
+          </div>
+          <div class="input-box">
+            <input
+              id="profile-email"
+              type="text"
+              class="profile-email-input"
+              placeholder=" "
+              required
+            />
+            <label for="profile-email">ایمیل</label>
+          </div>
+          <div class="input-box">
+            <input
+              id="profile-password"
+              type="text"
+              class="profile-password-input"
+              placeholder=" "
+              required
+            />
+            <label for="profile-password">رمز عبور</label>
+          </div>
+        </div>
+      </form>
+    </section>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="Scripts/chart.js"></script>
