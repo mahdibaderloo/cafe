@@ -17,13 +17,13 @@
 <br>
 
 -✨ Features
-    - Fully responsive layout
-    - Digital menu for customers (no paper needed)
-    - Admin panel to update menu items (no coding required)
-    - Stylish modern design
-    - Menu and services section
-    - Contact info and map section
-    - Smooth scrolling
+   - Fully responsive layout
+   - Digital menu for customers (no paper needed)
+   - Admin panel to update menu items (no coding required)
+   - Stylish modern design
+   - Menu and services section
+   - Contact info and map section
+   - Smooth scrolling
 
 <br>
 
