@@ -16,7 +16,7 @@
 
 <br>
 
--✨ Features
+- ✨ Features
    - Fully responsive layout
    - Digital menu for customers (no paper needed)
    - Admin panel to update menu items (no coding required)
