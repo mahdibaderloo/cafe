@@ -6,15 +6,30 @@
 <br>
 <br>
 
-> This site is used for Cafe Liilo orders ☕
+> ☕ This is a responsive landing page for a coffee shop
 >
-> Check this [URL](https://mahdibaderloo.github.io/cafe/) to see this repo ❤️
-
-desktop size soon...
+> 🎯 The goal is to replace traditional paper menus with a digital version that’s easy to access on any device.
+>
+> ➕ Bonus: The website allows the admin to update menu items easily without any coding knowledge!
+>
+> 🚀 Check it out live here: [Cafe Website Demo](https://mahdibaderloo.github.io/cafe/)
 
 <br>
 
-### made with :
+-✨ Features
+    - Fully responsive layout
+    - Digital menu for customers (no paper needed)
+    - Admin panel to update menu items (no coding required)
+    - Stylish modern design
+    - Menu and services section
+    - Contact info and map section
+    - Smooth scrolling
+
+<br>
+
+### 🛠️ Technologies Used:
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+
