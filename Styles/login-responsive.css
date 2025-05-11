@@ -28,6 +28,16 @@
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 760px;
+    height: 1000px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
