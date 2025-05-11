@@ -173,6 +173,30 @@
     font-size: 22px;
     padding: 10px 50px;
   }
+  .profile-popup-section {
+    height: 700px;
+  }
+  .profile-image-box {
+    width: 160px;
+    height: 160px;
+  }
+  .profile-username-input,
+  .profile-email-input,
+  .profile-password-input {
+    font-size: 22px;
+    border-radius: 30px;
+    padding: 14px;
+  }
+  .input-box label,
+  .textarea-box label {
+    top: 18px;
+    right: 12px;
+  }
+  .submit-profile {
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
