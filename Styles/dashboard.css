@@ -622,6 +622,7 @@ textarea {
 }
 
 .profile-popup-section {
+  display: none;
   justify-content: start;
   height: 520px;
 }
