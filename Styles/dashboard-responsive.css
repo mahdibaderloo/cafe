@@ -202,7 +202,46 @@
 @media screen and (min-width: 768px) {
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .desktop-container {
+    display: flex;
+    z-index: 0;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .menu-section {
+    position: unset;
+    height: 100vh;
+    width: 20%;
+  }
+  .menu-item,
+  .category,
+  .product,
+  .edit-profile-btn,
+  .submit-profile,
+  .close-icon,
+  .delete-product,
+  .submit-product,
+  .back-to-categories {
+    cursor: pointer;
+  }
+  .popup-section,
+  .profile-popup-section {
+    width: 700px;
+    /* left: 0; */
+    right: unset;
+    transform: unset;
+  }
 }
 
 @media screen and (min-width: 1280px) {

@@ -206,6 +206,11 @@ function editProduct(id) {
   container.style.filter = "blur(10px)";
   container.style.pointerEvents = "none";
 
+  if (window.innerWidth > 1023) {
+    let leftPos = container.offsetLeft + 100;
+    popupSection.style.left = `${leftPos}px`;
+  }
+
   let selectedItem = items.filter((item) => item.id === id);
 
   buttons.id = id;
@@ -235,6 +240,11 @@ editProfileBtn.addEventListener("click", () => {
   profilePopupSection.style.display = "flex";
   container.style.filter = "blur(10px)";
   container.style.pointerEvents = "none";
+
+  if (window.innerWidth > 1023) {
+    let leftPos = container.offsetLeft + 100;
+    profilePopupSection.style.left = `${leftPos}px`;
+  }
 });
 
 window.addEventListener("click", (e) => {

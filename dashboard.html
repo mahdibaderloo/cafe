@@ -19,220 +19,7 @@
     <link rel="stylesheet" href="Styles/dashboard-responsive.css" />
   </head>
   <body>
-    <!-- Container -->
-    <div class="container">
-      <!-- Header -->
-      <header class="header">
-        <p class="header-title">داشبورد</p>
-        <img src="Images/menu.svg" class="icon menu-icon" alt="icon" />
-      </header>
-      <!-- Dashboard Section -->
-      <section class="dashboard-section">
-        <div class="sales">
-          <div class="sales-icon-box">
-            <img src="Images/money.svg" class="icon" alt="" />
-          </div>
-          <div class="sales-volume-wrapper">
-            <p class="sales-title">میزان فروش</p>
-            <p class="sales-volume">834,000,000</p>
-          </div>
-        </div>
-        <div class="chart-box">
-          <canvas id="myChart"></canvas>
-        </div>
-        <div class="transactions-box">
-          <div class="transactions-title-box">
-            <img
-              src="Images/chartLineUp.svg"
-              alt="icon"
-              class="icon transactions-icon"
-            />
-            <p class="transactions-title">تراکنش ها</p>
-          </div>
-          <ul class="transactions">
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-            <li class="transaction">
-              <img src="Images/cash.svg" alt="icon" class="icon" />
-              <p class="transaction-value">400,000</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Categories Section -->
-      <section class="categories-section">
-        <div class="search-box">
-          <img src="Images/search.svg" alt="icon" class="icon search-icon" />
-          <input type="text" placeholder="جستجو..." class="search-input" />
-        </div>
-        <div class="categories-box">
-          <p class="categories-title">دسته بندی ها</p>
-          <ul class="categories">
-            <li class="category" data-item="cold-drink">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="cold-drink"
-              />
-              <p data-item="cold-drink">نوشیدنی سرد</p>
-            </li>
-            <li class="category" data-item="hot-coffee">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="hot-coffee"
-              />
-              <p data-item="hot-coffee">قهوه داغ</p>
-            </li>
-            <li class="category" data-item="hot-drink">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="hot-drink"
-              />
-              <p data-item="hot-drink">نوشیدنی داغ</p>
-            </li>
-            <li class="category" data-item="cold-coffee">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="cold-coffee"
-              />
-              <p data-item="cold-coffee">قهوه سرد</p>
-            </li>
-            <li class="category" data-item="shake">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="shake"
-              />
-              <p data-item="shake">شیک</p>
-            </li>
-            <li class="category" data-item="cake">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="cake"
-              />
-              <p data-item="cake">کیک و کوکی</p>
-            </li>
-            <li class="category" data-item="snack">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="snack"
-              />
-              <p data-item="snack">میان وعده</p>
-            </li>
-            <li class="category" data-item="tea">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="tea"
-              />
-              <p data-item="tea">دمنوش</p>
-            </li>
-            <li class="category" data-item="bubble-tea">
-              <img
-                src="Images/products.svg"
-                alt="icon"
-                class="icon"
-                data-item="bubble-tea"
-              />
-              <p data-item="bubble-tea">بابل تی</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Lines Section -->
-      <section class="lines-section">
-        <ul class="lines">
-          <li class="line">
-            <a href="" class="line-link" data-line="100r">۱۰۰ روبوستا</a>
-          </li>
-          <li class="line">
-            <a href="" class="line-link" data-line="7030r">۷۰ ۳۰ روبوستا</a>
-          </li>
-          <li class="line">
-            <a href="" class="line-link" data-line="100a">۱۰۰ عربیکا</a>
-          </li>
-          <li class="line">
-            <a href="" class="line-link" data-line="7030a">۷۰ ۳۰ عربیکا</a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Tea Glasses Section -->
-      <section class="tea-glasses-section">
-        <ul class="glasses">
-          <li class="glass">
-            <img src="Images/tea-1.png" class="glass-img" data-line="tea-1" />
-          </li>
-          <li class="glass">
-            <img src="Images/tea-2.png" class="glass-img" data-line="tea-2" />
-          </li>
-        </ul>
-      </section>
-
-      <!-- Products Section -->
-      <section class="products-section">
-        <hr />
-        <div class="products-header">
-          <p>نوشیدنی سرد</p>
-          <div class="back-to-categories" onclick="backToCategories()">
-            <span>دسته بندی ها</span
-            ><img src="Images/back.svg" alt="icon" class="icon back-icon" />
-          </div>
-        </div>
-        <ul class="products"></ul>
-      </section>
-
-      <!-- Profile Section -->
-      <section class="profile-section">
-        <div class="profile-img-box">
-          <img src="Images/profile.svg" alt="image" class="profile-img" />
-        </div>
-        <p class="username">Liilo Admin</p>
-        <p class="email">liiloadmin@example.com</p>
-        <button class="edit-profile-btn">ویرایش</button>
-      </section>
-
+    <div class="desktop-container">
       <!-- Menu Section -->
       <section class="menu-section">
         <img src="Images/lillo-logo.png" alt="" class="logo" />
@@ -255,6 +42,221 @@
           <span>خروج</span>
         </a>
       </section>
+
+      <!-- Container -->
+      <div class="container">
+        <!-- Header -->
+        <header class="header">
+          <p class="header-title">داشبورد</p>
+          <img src="Images/menu.svg" class="icon menu-icon" alt="icon" />
+        </header>
+        <!-- Dashboard Section -->
+        <section class="dashboard-section">
+          <div class="sales">
+            <div class="sales-icon-box">
+              <img src="Images/money.svg" class="icon" alt="" />
+            </div>
+            <div class="sales-volume-wrapper">
+              <p class="sales-title">میزان فروش</p>
+              <p class="sales-volume">834,000,000</p>
+            </div>
+          </div>
+          <div class="chart-box">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="transactions-box">
+            <div class="transactions-title-box">
+              <img
+                src="Images/chartLineUp.svg"
+                alt="icon"
+                class="icon transactions-icon"
+              />
+              <p class="transactions-title">تراکنش ها</p>
+            </div>
+            <ul class="transactions">
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+              <li class="transaction">
+                <img src="Images/cash.svg" alt="icon" class="icon" />
+                <p class="transaction-value">400,000</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+          <div class="search-box">
+            <img src="Images/search.svg" alt="icon" class="icon search-icon" />
+            <input type="text" placeholder="جستجو..." class="search-input" />
+          </div>
+          <div class="categories-box">
+            <p class="categories-title">دسته بندی ها</p>
+            <ul class="categories">
+              <li class="category" data-item="cold-drink">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="cold-drink"
+                />
+                <p data-item="cold-drink">نوشیدنی سرد</p>
+              </li>
+              <li class="category" data-item="hot-coffee">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="hot-coffee"
+                />
+                <p data-item="hot-coffee">قهوه داغ</p>
+              </li>
+              <li class="category" data-item="hot-drink">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="hot-drink"
+                />
+                <p data-item="hot-drink">نوشیدنی داغ</p>
+              </li>
+              <li class="category" data-item="cold-coffee">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="cold-coffee"
+                />
+                <p data-item="cold-coffee">قهوه سرد</p>
+              </li>
+              <li class="category" data-item="shake">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="shake"
+                />
+                <p data-item="shake">شیک</p>
+              </li>
+              <li class="category" data-item="cake">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="cake"
+                />
+                <p data-item="cake">کیک و کوکی</p>
+              </li>
+              <li class="category" data-item="snack">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="snack"
+                />
+                <p data-item="snack">میان وعده</p>
+              </li>
+              <li class="category" data-item="tea">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="tea"
+                />
+                <p data-item="tea">دمنوش</p>
+              </li>
+              <li class="category" data-item="bubble-tea">
+                <img
+                  src="Images/products.svg"
+                  alt="icon"
+                  class="icon"
+                  data-item="bubble-tea"
+                />
+                <p data-item="bubble-tea">بابل تی</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Lines Section -->
+        <section class="lines-section">
+          <ul class="lines">
+            <li class="line">
+              <a href="" class="line-link" data-line="100r">۱۰۰ روبوستا</a>
+            </li>
+            <li class="line">
+              <a href="" class="line-link" data-line="7030r">۷۰ ۳۰ روبوستا</a>
+            </li>
+            <li class="line">
+              <a href="" class="line-link" data-line="100a">۱۰۰ عربیکا</a>
+            </li>
+            <li class="line">
+              <a href="" class="line-link" data-line="7030a">۷۰ ۳۰ عربیکا</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Tea Glasses Section -->
+        <section class="tea-glasses-section">
+          <ul class="glasses">
+            <li class="glass">
+              <img src="Images/tea-1.png" class="glass-img" data-line="tea-1" />
+            </li>
+            <li class="glass">
+              <img src="Images/tea-2.png" class="glass-img" data-line="tea-2" />
+            </li>
+          </ul>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+          <hr />
+          <div class="products-header">
+            <p>نوشیدنی سرد</p>
+            <div class="back-to-categories" onclick="backToCategories()">
+              <span>دسته بندی ها</span
+              ><img src="Images/back.svg" alt="icon" class="icon back-icon" />
+            </div>
+          </div>
+          <ul class="products"></ul>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+          <div class="profile-img-box">
+            <img src="Images/profile.svg" alt="image" class="profile-img" />
+          </div>
+          <p class="username">Liilo Admin</p>
+          <p class="email">liiloadmin@example.com</p>
+          <button class="edit-profile-btn">ویرایش</button>
+        </section>
+      </div>
     </div>
 
     <!-- Popup Section -->
