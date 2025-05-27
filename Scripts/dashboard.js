@@ -1,4 +1,7 @@
-import items from "./db.js";
+import { getItems } from "./apiItems.js";
+
+const items = [];
+getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
 
 const container = document.querySelector(".container");
 const headerTitle = document.querySelector(".header-title");

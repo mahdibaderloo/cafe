@@ -1,25 +1,24 @@
-const username = "liiloadmin";
-const password = "liiloadmin";
+import { getAdmin, isValidAdmin } from "./apiAdmins.js";
+getAdmin().then((data) => console.log(data));
 
 const loginBtn = document.querySelector(".login-btn");
-let usernameInput = document.querySelector(".username-input");
+let emailInput = document.querySelector(".email-input");
 let passwordInput = document.querySelector(".password-input");
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  let usernameInputValue = usernameInput.value;
+  let emailInputValue = emailInput.value;
   let passwordInputValue = passwordInput.value;
-  validation(usernameInputValue, passwordInputValue);
-});
 
-function validation(usernameValue, passwordValue) {
-  if (usernameValue === username && passwordValue === password) {
-    login();
-  } else {
-    alert("نام کاربری یا پسورد اشتباه وارد شده :(");
-  }
-}
+  isValidAdmin(emailInputValue, passwordInputValue).then((data) => {
+    if (data) {
+      login();
+    } else {
+      alert("ایمیل یا پسورد اشتباه وارد شده :(");
+    }
+  });
+});
 
 function login() {
   window.location.href = "dashboard.html";

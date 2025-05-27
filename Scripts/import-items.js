@@ -2,7 +2,6 @@ import { getItems } from "./apiItems.js";
 
 const items = [];
 getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
-console.log(items);
 
 const itemsWrapper = document.querySelector(".items");
 const category = document.querySelectorAll(".category");
