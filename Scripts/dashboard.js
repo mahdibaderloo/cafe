@@ -3,7 +3,6 @@ import { getItems } from "./apiItems.js";
 
 const items = [];
 getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
-getAdmin().then((data) => console.log(data));
 
 const container = document.querySelector(".container");
 const headerTitle = document.querySelector(".header-title");
@@ -28,6 +27,9 @@ const productDescInput = document.querySelector(".product-desc-input");
 const buttons = document.querySelector(".buttons");
 const profilePopupSection = document.querySelector(".profile-popup-section");
 const editProfileBtn = document.querySelector(".edit-profile-btn");
+const profileImg = document.querySelector(".profile-img");
+const profileUsername = document.querySelector(".username");
+const profileEmail = document.querySelector(".email");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -241,6 +243,13 @@ function submitChanges(el) {
   console.log(el.parentElement.id);
 }
 
+async function loadAdmin() {
+  const data = await getAdmin();
+  profileImg.src = data.image ? data.image : "Images/profile.svg";
+  profileUsername.innerHTML = data.username;
+  profileEmail.innerHTML = data.email;
+}
+
 editProfileBtn.addEventListener("click", () => {
   profilePopupSection.style.display = "flex";
   container.style.filter = "blur(10px)";
@@ -265,6 +274,7 @@ window.addEventListener("click", (e) => {
 
 window.addEventListener("load", () => {
   navigateTo(location.hash || "#/dashboard");
+  loadAdmin();
 });
 
 window.addEventListener("hashchange", () => {
