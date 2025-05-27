@@ -1,5 +1,4 @@
-import { getAdmin, isValidAdmin } from "./apiAdmins.js";
-getAdmin().then((data) => console.log(data));
+import { isValidAdmin } from "./apiAdmins.js";
 
 const loginBtn = document.querySelector(".login-btn");
 let emailInput = document.querySelector(".email-input");

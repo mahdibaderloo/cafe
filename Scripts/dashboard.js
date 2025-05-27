@@ -1,7 +1,9 @@
+import { getAdmin } from "./apiAdmins.js";
 import { getItems } from "./apiItems.js";
 
 const items = [];
 getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
+getAdmin().then((data) => console.log(data));
 
 const container = document.querySelector(".container");
 const headerTitle = document.querySelector(".header-title");
