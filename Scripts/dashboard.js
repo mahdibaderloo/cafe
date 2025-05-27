@@ -30,6 +30,10 @@ const editProfileBtn = document.querySelector(".edit-profile-btn");
 const profileImg = document.querySelector(".profile-img");
 const profileUsername = document.querySelector(".username");
 const profileEmail = document.querySelector(".email");
+const profileImagePopup = document.querySelector(".profile-image");
+const profileUsernameInput = document.querySelector(".profile-username-input");
+const profileEmailInput = document.querySelector(".profile-email-input");
+const profilePasswordInput = document.querySelector(".profile-password-input");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -248,6 +252,11 @@ async function loadAdmin() {
   profileImg.src = data.image ? data.image : "Images/profile.svg";
   profileUsername.innerHTML = data.username;
   profileEmail.innerHTML = data.email;
+
+  profileImagePopup.src = data.image ? data.image : "Images/profile.svg";
+  profileUsernameInput.value = data.username;
+  profileEmailInput.value = data.email;
+  profilePasswordInput.value = data.password;
 }
 
 editProfileBtn.addEventListener("click", () => {
