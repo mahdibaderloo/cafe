@@ -1,8 +1,14 @@
 import { getAdmin } from "./apiAdmins.js";
-import { getItems } from "./apiItems.js";
+import { getItems, updateItem } from "./apiItems.js";
 
 const items = [];
-getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
+
+async function loadItems() {
+  const data = await getItems();
+
+  items.length = 0;
+  data.forEach((dataItem) => items.push(dataItem));
+}
 
 const container = document.querySelector(".container");
 const headerTitle = document.querySelector(".header-title");
@@ -20,6 +26,7 @@ const lines = document.querySelectorAll(".line-link");
 const teaGlassesSection = document.querySelector(".tea-glasses-section");
 const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
+const popupForm = document.querySelector(".popup-main");
 const popupImage = document.querySelector(".popup-image");
 const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
@@ -230,6 +237,28 @@ function editProduct(id) {
   productPriceInput.value = selectedItem[0].price;
   popupImage.src = selectedItem[0].image;
   productDescInput.value = selectedItem[0].desc ? selectedItem[0].desc : "";
+
+  popupForm.onsubmit = async function (e) {
+    e.preventDefault();
+
+    const item = {
+      id: Number(id),
+      product: productTitleInput.value,
+      price: Number(productPriceInput.value),
+      image: popupImage.src,
+      desc: productDescInput.value,
+    };
+
+    try {
+      await updateItem(item);
+      console.log("آپدیت موفق بود");
+      await loadItems();
+      closePopup();
+      generateItems(selectedItem[0].category);
+    } catch (err) {
+      console.error("خطا در آپدیت:", err.message);
+    }
+  };
 }
 
 function closePopup() {
@@ -240,10 +269,6 @@ function closePopup() {
 }
 
 function deleteProduct(el) {
-  console.log(el.parentElement.id);
-}
-
-function submitChanges(el) {
   console.log(el.parentElement.id);
 }
 
@@ -283,6 +308,7 @@ window.addEventListener("click", (e) => {
 
 window.addEventListener("load", () => {
   navigateTo(location.hash || "#/dashboard");
+  loadItems();
   loadAdmin();
 });
 
@@ -294,4 +320,3 @@ window.backToCategories = backToCategories;
 window.editProduct = editProduct;
 window.closePopup = closePopup;
 window.deleteProduct = deleteProduct;
-window.submitChanges = submitChanges;
