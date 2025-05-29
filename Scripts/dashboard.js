@@ -28,6 +28,7 @@ const glasses = document.querySelectorAll(".glass");
 const popupSection = document.querySelector(".popup-section");
 const popupForm = document.querySelector(".popup-main");
 const popupImage = document.querySelector(".popup-image");
+const popupImageInput = document.querySelector(".popup-image-input");
 const productTitleInput = document.querySelector(".product-title-input");
 const productPriceInput = document.querySelector(".product-price-input");
 const productDescInput = document.querySelector(".product-desc-input");
@@ -235,7 +236,9 @@ function editProduct(id) {
 
   productTitleInput.value = selectedItem[0].product;
   productPriceInput.value = selectedItem[0].price;
-  popupImage.src = selectedItem[0].image;
+  popupImage.src = popupImage.value
+    ? popupImage.value
+    : "Images/Cafe-Au-Lait-001s.jpg";
   productDescInput.value = selectedItem[0].desc ? selectedItem[0].desc : "";
 
   popupForm.onsubmit = async function (e) {
@@ -245,7 +248,7 @@ function editProduct(id) {
       id: Number(id),
       product: productTitleInput.value,
       price: Number(productPriceInput.value),
-      image: popupImage.src,
+      image: popupImage.value,
       desc: productDescInput.value,
     };
 

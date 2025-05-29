@@ -153,7 +153,9 @@ function createListItems(data) {
   selectedItems.forEach((item) => {
     itemsWrapper.insertAdjacentHTML(
       "beforeend",
-      `<li class="item"><div class="item-top"><img class="item-img" src="Images/Cafe-Au-Lait-001s.jpg" alt=""><div class="item__content"><h3 class="item-title">${
+      `<li class="item"><div class="item-top"><img class="item-img" src=${
+        item.image
+      } alt=""><div class="item__content"><h3 class="item-title">${
         item.product
       }</h3><p class="item-desc">${
         item.desc
