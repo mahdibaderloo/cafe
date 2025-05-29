@@ -236,8 +236,8 @@ function editProduct(id) {
 
   productTitleInput.value = selectedItem[0].product;
   productPriceInput.value = selectedItem[0].price;
-  popupImage.src = popupImage.value
-    ? popupImage.value
+  popupImage.src = selectedItem[0].image
+    ? selectedItem[0].image
     : "Images/Cafe-Au-Lait-001s.jpg";
   productDescInput.value = selectedItem[0].desc ? selectedItem[0].desc : "";
 
@@ -248,7 +248,7 @@ function editProduct(id) {
       id: Number(id),
       product: productTitleInput.value,
       price: Number(productPriceInput.value),
-      image: popupImage.value,
+      image: popupImage.src,
       desc: productDescInput.value,
     };
 
@@ -263,6 +263,18 @@ function editProduct(id) {
     }
   };
 }
+
+popupImageInput.addEventListener("change", function () {
+  const file = this.files[0];
+  if (file) {
+    const render = new FileReader();
+    render.onload = (e) => {
+      popupImage.src = e.target.result;
+      console.log(e.target.result);
+    };
+    render.readAsDataURL(file);
+  }
+});
 
 function closePopup() {
   popupSection.style.display = "none";
