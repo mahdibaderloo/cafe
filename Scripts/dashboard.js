@@ -1,4 +1,4 @@
-import { getAdmin } from "./apiAdmins.js";
+import { editAdminData, getAdmin } from "./apiAdmins.js";
 import { getItems, updateItem } from "./apiItems.js";
 
 const items = [];
@@ -34,6 +34,7 @@ const productPriceInput = document.querySelector(".product-price-input");
 const productDescInput = document.querySelector(".product-desc-input");
 const buttons = document.querySelector(".buttons");
 const profilePopupSection = document.querySelector(".profile-popup-section");
+const profilePopupForm = document.querySelector(".profile-popup-main");
 const editProfileBtn = document.querySelector(".edit-profile-btn");
 const profileImg = document.querySelector(".profile-img");
 const profileUsername = document.querySelector(".username");
@@ -42,6 +43,7 @@ const profileImagePopup = document.querySelector(".profile-image");
 const profileUsernameInput = document.querySelector(".profile-username-input");
 const profileEmailInput = document.querySelector(".profile-email-input");
 const profilePasswordInput = document.querySelector(".profile-password-input");
+const profileImageInput = document.querySelector(".profile-image-input");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -270,7 +272,6 @@ popupImageInput.addEventListener("change", function () {
     const render = new FileReader();
     render.onload = (e) => {
       popupImage.src = e.target.result;
-      console.log(e.target.result);
     };
     render.readAsDataURL(file);
   }
@@ -289,6 +290,7 @@ function deleteProduct(el) {
 
 async function loadAdmin() {
   const data = await getAdmin();
+  profilePopupSection.id = data.id;
   profileImg.src = data.image ? data.image : "Images/profile.svg";
   profileUsername.innerHTML = data.username;
   profileEmail.innerHTML = data.email;
@@ -307,6 +309,40 @@ editProfileBtn.addEventListener("click", () => {
   if (window.innerWidth > 1023) {
     let leftPos = container.offsetLeft + 100;
     profilePopupSection.style.left = `${leftPos}px`;
+  }
+});
+
+profilePopupForm.onsubmit = async function (e) {
+  e.preventDefault();
+
+  const adminData = {
+    id: profilePopupSection.id,
+    username: profileUsernameInput.value,
+    email: profileEmailInput.value,
+    password: profilePasswordInput.value,
+    image: profileImagePopup.src,
+  };
+
+  try {
+    await editAdminData(adminData);
+    console.log("آپدیت موفق بود");
+    loadAdmin();
+    closePopup();
+  } catch (err) {
+    console.error("خطا در آپدیت:", err.message);
+  }
+};
+
+console.log(profileImageInput);
+profileImageInput.addEventListener("change", function () {
+  const file = this.files[0];
+  if (file) {
+    const render = new FileReader();
+    render.onload = (e) => {
+      profileImagePopup.src = e.target.result;
+      console.log(profileImagePopup.src);
+    };
+    render.readAsDataURL(file);
   }
 });
 

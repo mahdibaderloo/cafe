@@ -38,3 +38,12 @@ export async function getAdmin() {
     return profile;
   }
 }
+
+export async function editAdminData(adminData) {
+  const { username, email, password, image } = adminData;
+  const { data, error } = await supabase
+    .from("profiles")
+    .update({ username, email, password, image })
+    .eq("id", id)
+    .select();
+}
