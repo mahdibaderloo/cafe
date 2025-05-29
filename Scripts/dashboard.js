@@ -333,14 +333,12 @@ profilePopupForm.onsubmit = async function (e) {
   }
 };
 
-console.log(profileImageInput);
 profileImageInput.addEventListener("change", function () {
   const file = this.files[0];
   if (file) {
     const render = new FileReader();
     render.onload = (e) => {
       profileImagePopup.src = e.target.result;
-      console.log(profileImagePopup.src);
     };
     render.readAsDataURL(file);
   }

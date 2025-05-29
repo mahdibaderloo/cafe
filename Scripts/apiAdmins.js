@@ -40,10 +40,18 @@ export async function getAdmin() {
 }
 
 export async function editAdminData(adminData) {
-  const { username, email, password, image } = adminData;
+  const { id, username, email, password, image } = adminData;
   const { data, error } = await supabase
     .from("profiles")
     .update({ username, email, password, image })
     .eq("id", id)
     .select();
+
+  if (error) {
+    console.error("Update error:", error);
+    throw new Error(error.message);
+  }
+
+  console.log("Update success:", data);
+  return data;
 }
