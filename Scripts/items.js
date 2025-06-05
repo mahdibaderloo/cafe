@@ -1,7 +1,6 @@
 import { getItems } from "./apiItems.js";
 
 const items = [];
-getItems().then((data) => data.forEach((dataItems) => items.push(dataItems)));
 
 const itemsWrapper = document.querySelector(".items");
 const category = document.querySelectorAll(".category");
@@ -306,7 +305,10 @@ function removeItem(id) {
 }
 
 window.addEventListener("load", (event) => {
-  createListItems("cold");
+  getItems().then((data) => {
+    data.forEach((dataItems) => items.push(dataItems));
+    createListItems("cold");
+  });
 
   let localItems = getItemsInLocalStorage();
   addToCart(localItems);
