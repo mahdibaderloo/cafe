@@ -14,9 +14,9 @@
     border-radius: 40px;
     margin-bottom: 0.5rem;
   }
-  .username-input,
+  .email-input,
   .password-input {
-    font-size: 24px;
+    font-size: 20px;
   }
   .icon {
     width: 40px;
@@ -28,15 +28,20 @@
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .container {
-    width: 760px;
-    height: 1000px;
+    /* flex-direction: row; */
+  }
+  .login-title {
+    display: none;
+  }
+  .login-box {
+    /* width: 80%; */
+  }
+  .login-img-box {
+    width: 40%;
+  }
+  .login-img {
+    /* width: 100px; */
   }
 }
 
@@ -44,6 +49,16 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .login-title {
+    display: block;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .login-img-box {
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 1680px) {
