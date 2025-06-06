@@ -1,4 +1,5 @@
 import { getItems } from "./apiItems.js";
+import { addOrder } from "./apiOrders.js";
 
 const items = [];
 
@@ -11,6 +12,7 @@ const glasses = document.querySelectorAll(".glass");
 const products = document.querySelector(".products");
 const totalPrice = document.querySelector(".total-price");
 const shoppingCart = document.querySelector(".shopping-cart-logo");
+const orderButton = document.querySelector(".order_btn");
 
 let productsContent = [];
 
@@ -303,6 +305,13 @@ function removeItem(id) {
   setItemsInLocalStorage(localItems);
   addToCart(localItems);
 }
+
+orderButton.addEventListener("click", () => {
+  const order = getItemsInLocalStorage();
+  const total = totalPrice.textContent;
+
+  addOrder(order, total.replace(",", ""));
+});
 
 window.addEventListener("load", (event) => {
   getItems().then((data) => {

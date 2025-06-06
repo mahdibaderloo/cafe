@@ -251,7 +251,8 @@
   .header__left-logo,
   .cart-close-icon,
   .product-count-plus,
-  .product-count-minus {
+  .product-count-minus,
+  .order_btn {
     cursor: pointer;
   }
   .main__bg-box {
