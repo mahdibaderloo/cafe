@@ -12,6 +12,7 @@ const glasses = document.querySelectorAll(".glass");
 const products = document.querySelector(".products");
 const totalPrice = document.querySelector(".total-price");
 const shoppingCart = document.querySelector(".shopping-cart-logo");
+const orderButtonBox = document.querySelector(".order_btn_box");
 const orderButton = document.querySelector(".order_btn");
 
 let productsContent = [];
@@ -242,6 +243,7 @@ function addToCart(data) {
     );
   });
   totalPriceCount();
+  orderButtonBox.style.display = "flex";
   // changeCartLight()
 }
 
@@ -303,6 +305,10 @@ function removeItem(id) {
   products.innerHTML = "";
   setItemsInLocalStorage(localItems);
   addToCart(localItems);
+
+  if (products.textContent === "") {
+    orderButtonBox.style.display = "none";
+  }
 }
 
 orderButton.addEventListener("click", async () => {
@@ -314,6 +320,8 @@ orderButton.addEventListener("click", async () => {
     localStorage.removeItem("items");
     productsContent = [];
     products.innerHTML = "";
+    totalPriceCount();
+    orderButtonBox.style.display = "none";
   }
 });
 
