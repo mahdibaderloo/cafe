@@ -267,7 +267,6 @@ function changePrice(el, id) {
   let prePriceElement =
     el.parentElement.parentElement.querySelector(".product-price");
   let finalPrice = selectedItem[0].price * selectedItem[0].count;
-  console.log(finalPrice);
   prePriceElement.innerHTML = finalPrice.toLocaleString("EN");
 
   setItemsInLocalStorage(productsContent);
@@ -306,11 +305,16 @@ function removeItem(id) {
   addToCart(localItems);
 }
 
-orderButton.addEventListener("click", () => {
+orderButton.addEventListener("click", async () => {
   const order = getItemsInLocalStorage();
   const total = totalPrice.textContent;
+  const response = await addOrder(order, Number(total.replace(",", "")));
 
-  addOrder(order, total.replace(",", ""));
+  if (response) {
+    localStorage.removeItem("items");
+    productsContent = [];
+    products.innerHTML = "";
+  }
 });
 
 window.addEventListener("load", (event) => {
