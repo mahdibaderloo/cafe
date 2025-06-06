@@ -54,6 +54,5 @@ export async function getOrders() {
     throw new Error("Orders could not be loaded");
   }
 
-  console.log(data);
   return data;
 }

@@ -360,23 +360,24 @@ profileImageInput.addEventListener("change", function () {
   }
 });
 
-async function getOrdersFromApi() {
+async function loadOrders() {
   const apiOrders = await getOrders();
   await apiOrders.forEach((order) => {
-    console.log(order);
+    orders.innerHTML = "";
     orders.insertAdjacentHTML(
       "afterbegin",
       `         <tr>
                   <td>${order.id}</td>
-                  <td>h</td>
+                  <td>${order.username}</td>
                   <td>${order.total_price}</td>
-                </tr>`
+                </tr>
+              `
     );
   });
 }
 
 ordersButton.addEventListener("click", () => {
-  getOrdersFromApi();
+  loadOrders();
 });
 
 window.addEventListener("click", (e) => {
@@ -394,6 +395,7 @@ window.addEventListener("load", () => {
   navigateTo(location.hash || "#/dashboard");
   loadItems();
   loadAdmin();
+  loadOrders();
 });
 
 window.addEventListener("hashchange", () => {

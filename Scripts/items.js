@@ -314,7 +314,10 @@ function removeItem(id) {
 orderButton.addEventListener("click", async () => {
   const order = getItemsInLocalStorage();
   const total = totalPrice.textContent;
-  const response = await addOrder(order, Number(total.replace(",", "")));
+  const response = await addOrder(
+    JSON.stringify(order),
+    Number(total.replace(",", ""))
+  );
 
   if (response) {
     localStorage.removeItem("items");
