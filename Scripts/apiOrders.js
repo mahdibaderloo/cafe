@@ -46,3 +46,14 @@ export async function addOrder(order, totalPrice) {
     return data;
   }
 }
+
+export async function getOrders() {
+  let { data, error } = await supabase.from("orders").select("*");
+
+  if (error) {
+    throw new Error("Orders could not be loaded");
+  }
+
+  console.log(data);
+  return data;
+}

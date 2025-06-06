@@ -686,3 +686,29 @@ textarea {
   margin-top: 1.5rem;
   background-color: lightseagreen;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--coffee-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+th {
+  /* font-weight: bold; */
+  background-color: #3f2701dc;
+  color: var(--main-color);
+}
+
+td,
+th {
+  border: 1px solid var(--coffee-color);
+  text-align: start;
+  padding: 6px;
+}
+
+tr:nth-child(even) {
+  background-color: #3f27013f;
+}

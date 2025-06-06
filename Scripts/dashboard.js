@@ -1,5 +1,6 @@
 import { editAdminData, getAdmin } from "./apiAdmins.js";
 import { getItems, updateItem } from "./apiItems.js";
+import { getOrders } from "./apiOrders.js";
 
 const items = [];
 
@@ -45,6 +46,8 @@ const profileUsernameInput = document.querySelector(".profile-username-input");
 const profileEmailInput = document.querySelector(".profile-email-input");
 const profilePasswordInput = document.querySelector(".profile-password-input");
 const profileImageInput = document.querySelector(".profile-image-input");
+const orders = document.querySelector(".orders");
+const ordersButton = document.getElementById("orders-btn");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -355,6 +358,25 @@ profileImageInput.addEventListener("change", function () {
     };
     render.readAsDataURL(file);
   }
+});
+
+async function getOrdersFromApi() {
+  const apiOrders = await getOrders();
+  await apiOrders.forEach((order) => {
+    console.log(order);
+    orders.insertAdjacentHTML(
+      "afterbegin",
+      `         <tr>
+                  <td>${order.id}</td>
+                  <td>h</td>
+                  <td>${order.total_price}</td>
+                </tr>`
+    );
+  });
+}
+
+ordersButton.addEventListener("click", () => {
+  getOrdersFromApi();
 });
 
 window.addEventListener("click", (e) => {
