@@ -17,6 +17,7 @@ const menuIcon = document.querySelector(".menu-icon");
 const menuItem = document.querySelectorAll(".menu-item");
 const dashboardSection = document.querySelector(".dashboard-section");
 const CategoriesSection = document.querySelector(".categories-section");
+const ordersSection = document.querySelector(".orders-section");
 const profileSection = document.querySelector(".profile-section");
 const categories = document.querySelectorAll(".category");
 const ProductsSection = document.querySelector(".products-section");
@@ -58,7 +59,9 @@ menuItem.forEach((item) => {
         break;
       case "products-btn":
         route = "#/products";
-
+        break;
+      case "orders-btn":
+        route = "#/orders";
         break;
       case "profile-btn":
         route = "#/profile";
@@ -74,19 +77,29 @@ function navigateTo(route) {
     case "#/dashboard":
       dashboardSection.style.display = "flex";
       CategoriesSection.style.display = "none";
+      ordersSection.style.display = "none";
       profileSection.style.display = "none";
       headerTitle.innerHTML = "داشبورد";
       break;
     case "#/products":
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "flex";
+      ordersSection.style.display = "none";
       profileSection.style.display = "none";
       headerTitle.innerHTML = "محصولات";
+      break;
+    case "#/orders":
+      dashboardSection.style.display = "none";
+      CategoriesSection.style.display = "none";
+      ordersSection.style.display = "flex";
+      profileSection.style.display = "none";
+      headerTitle.innerHTML = "سفارشات";
       break;
     case "#/profile":
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "none";
       profileSection.style.display = "flex";
+      ordersSection.style.display = "none";
       headerTitle.innerHTML = "پروفایل";
       break;
     default:
