@@ -337,7 +337,7 @@ submitOrder.addEventListener("click", async (e) => {
     const total = totalPrice.textContent;
     const response = await addOrder(
       JSON.stringify(order),
-      Number(total.replace(",", "")),
+      Number(total.replaceAll(",", "")),
       usernameInput.value
     );
 

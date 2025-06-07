@@ -362,8 +362,8 @@ profileImageInput.addEventListener("change", function () {
 
 async function loadOrders() {
   const apiOrders = await getOrders();
+  orders.innerHTML = "";
   await apiOrders.forEach((order) => {
-    orders.innerHTML = "";
     orders.insertAdjacentHTML(
       "afterbegin",
       `         <tr>
