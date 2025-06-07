@@ -15,6 +15,7 @@ const shoppingCart = document.querySelector(".shopping-cart-logo");
 const orderButtonBox = document.querySelector(".order_btn_box");
 const orderButton = document.querySelector(".order_btn");
 const submitOrderForm = document.querySelector(".submit-order-form");
+const usernameInput = document.querySelector(".username-input");
 const bgBlur = document.querySelector(".bg-blur");
 const submitOrder = document.querySelector(".submit-order");
 const cancelOrder = document.querySelector(".cancel-order");
@@ -318,18 +319,45 @@ function removeItem(id) {
 orderButton.addEventListener("click", () => {
   submitOrderForm.style.display = "flex";
   bgBlur.style.display = "block";
+  usernameInput.focus();
 });
 
 bgBlur.addEventListener("click", () => {
-  submitOrderForm.style.display = "none";
-  bgBlur.style.display = "none";
+  closeOrderForm();
+});
+
+submitOrder.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  if (usernameInput.value.trim() !== "") {
+    const order = getItemsInLocalStorage();
+    const total = totalPrice.textContent;
+    const response = await addOrder(
+      JSON.stringify(order),
+      Number(total.replace(",", "")),
+      usernameInput.value
+    );
+
+    if (response) {
+      localStorage.removeItem("items");
+      productsContent = [];
+      products.innerHTML = "";
+      totalPriceCount();
+      orderButtonBox.style.display = "none";
+    }
+    closeOrderForm();
+  }
 });
 
 cancelOrder.addEventListener("click", (e) => {
   e.preventDefault();
+  closeOrderForm();
+});
+
+function closeOrderForm() {
   submitOrderForm.style.display = "none";
   bgBlur.style.display = "none";
-});
+}
 
 window.addEventListener("load", (event) => {
   getItems().then((data) => {

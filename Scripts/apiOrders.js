@@ -1,9 +1,9 @@
 import supabase from "./supabase.js";
 
-export async function addOrder(order, totalPrice) {
+export async function addOrder(order, totalPrice, username) {
   const { data, error } = await supabase
     .from("orders")
-    .insert([{ order, total_price: totalPrice }])
+    .insert([{ order, total_price: totalPrice, username }])
     .select();
 
   if (error) {
