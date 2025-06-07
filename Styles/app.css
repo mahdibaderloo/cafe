@@ -537,21 +537,59 @@ body {
 }
 
 .submit-order-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit-order-form {
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 4px #351f0854;
+}
+
+.submit-text {
+  color: var(--coffee-color);
+  font-size: 18px;
 }
 
 .username-input {
+  width: 80%;
+  border: 2px solid var(--coffee-color);
+  outline: none;
+  border-radius: 7px;
+  padding: 2px;
+  padding-right: 8px;
+  font-family: var(--font);
+  font-size: 16px;
+  text-align: center;
 }
 
 .submit-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.cancel-order {
-}
-
+.cancel-order,
 .submit-order {
+  width: 35%;
+  height: 40px;
+  font-family: var(--font);
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid var(--coffee-color);
+  color: var(--coffee-color);
+  background-color: #3f270115;
 }
 
 /* 
