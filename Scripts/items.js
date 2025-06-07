@@ -14,6 +14,10 @@ const totalPrice = document.querySelector(".total-price");
 const shoppingCart = document.querySelector(".shopping-cart-logo");
 const orderButtonBox = document.querySelector(".order_btn_box");
 const orderButton = document.querySelector(".order_btn");
+const submitOrderForm = document.querySelector(".submit-order-form");
+const bgBlur = document.querySelector(".bg-blur");
+const submitOrder = document.querySelector(".submit-order");
+const cancelOrder = document.querySelector(".cancel-order");
 
 let productsContent = [];
 
@@ -311,21 +315,20 @@ function removeItem(id) {
   }
 }
 
-orderButton.addEventListener("click", async () => {
-  const order = getItemsInLocalStorage();
-  const total = totalPrice.textContent;
-  const response = await addOrder(
-    JSON.stringify(order),
-    Number(total.replace(",", ""))
-  );
+orderButton.addEventListener("click", () => {
+  submitOrderForm.style.display = "flex";
+  bgBlur.style.display = "block";
+});
 
-  if (response) {
-    localStorage.removeItem("items");
-    productsContent = [];
-    products.innerHTML = "";
-    totalPriceCount();
-    orderButtonBox.style.display = "none";
-  }
+bgBlur.addEventListener("click", () => {
+  submitOrderForm.style.display = "none";
+  bgBlur.style.display = "none";
+});
+
+cancelOrder.addEventListener("click", (e) => {
+  e.preventDefault();
+  submitOrderForm.style.display = "none";
+  bgBlur.style.display = "none";
 });
 
 window.addEventListener("load", (event) => {
