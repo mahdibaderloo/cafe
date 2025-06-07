@@ -248,7 +248,6 @@ function addToCart(data) {
     );
   });
   totalPriceCount();
-  orderButtonBox.style.display = "flex";
   // changeCartLight()
 }
 
@@ -300,6 +299,10 @@ function totalPriceCount() {
   if (products.innerHTML == "") {
     totalPrice.innerHTML = 0;
   }
+
+  if (totalPrice.innerHTML != 0) {
+    orderButtonBox.style.display = "flex";
+  }
 }
 
 function removeItem(id) {
@@ -311,7 +314,7 @@ function removeItem(id) {
   setItemsInLocalStorage(localItems);
   addToCart(localItems);
 
-  if (products.textContent === "") {
+  if (products.textContent === "" || productsContent.length === 0) {
     orderButtonBox.style.display = "none";
   }
 }
@@ -364,6 +367,11 @@ window.addEventListener("load", (event) => {
     data.forEach((dataItems) => items.push(dataItems));
     createListItems("cold");
   });
+
+  if (products.textContent === "" || productsContent.length === 0) {
+    orderButtonBox.style.display = "none";
+    console.log(products);
+  }
 
   let localItems = getItemsInLocalStorage();
   addToCart(localItems);
