@@ -721,9 +721,8 @@ textarea {
   border-radius: 10px;
   border: 1px solid var(--coffee-color);
   flex-direction: column;
-  /* justify-content: space-between; */
   width: 90%;
-  /* height: 500px; */
+  height: fit-content;
   padding: 14px;
   padding-top: 1rem;
   background-color: var(--main-color);
@@ -736,39 +735,43 @@ textarea {
   z-index: 50;
 }
 
-.order-id-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-
 .order-id {
 }
 
-.user-information {
+.user-information,
+.order-information {
   margin-top: 2rem;
 }
 
-.user-information-title {
+.user-information-title,
+.order-information-title {
   font-weight: bold;
   font-size: 18px;
 }
 
-.user-information > div {
+.user-information > div,
+.order-information > div {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: 0.5rem;
   gap: 2rem;
   padding-right: 10px;
 }
 
-.user-information > div > div {
+.order-information > div {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-information > div > div,
+.order-information > div > div {
   display: flex;
   gap: 6px;
 }
 
-.user-information > div > div p {
+.user-information > div > div p,
+.order-information > div > div p {
   font-weight: bold;
 }
 

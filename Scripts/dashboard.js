@@ -49,11 +49,13 @@ const profileImageInput = document.querySelector(".profile-image-input");
 const orders = document.querySelector(".orders");
 const orderPopupSection = document.querySelector(".order-popup-section");
 const ordersButton = document.getElementById("orders-btn");
-const orderId = document.querySelector(".order-id");
 const orderUsername = document.querySelector(".user-information-name");
 const orderMobile = document.querySelector(".user-information-mobile");
 const orderData = document.querySelector(".order-data");
 const orderTotalPrice = document.querySelector(".order-total-price");
+const orderId = document.querySelector(".order-information-id");
+const orderDate = document.querySelector(".order-information-date");
+const orderTime = document.querySelector(".order-information-time");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -408,8 +410,8 @@ function openOrder(order) {
   orderMobile.innerHTML = order[0].mobile;
   orderTotalPrice.innerHTML = order[0].total_price.toLocaleString();
 
-  let time = shamsiDate(order[0].created_at);
-  console.log(time);
+  orderData.innerHTML = shamsiDate(order[0].created_at);
+  orderTime.innerHTML = order[0].created_at.slice(11, 19);
 
   orderData.innerHTML = "";
   JSON.parse(order[0].order).map((item) =>
@@ -425,16 +427,17 @@ function openOrder(order) {
 }
 
 function shamsiDate(time) {
-  console.log(time.slice(11, 19));
   const date = new Date(time);
   const options = {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-    calendar: "persian",
   };
 
-  const formatter = new Intl.DateTimeFormat("fa-IR-u-ca-persian", options);
+  const formatter = new Intl.DateTimeFormat(
+    "fa-IR-u-ca-persian-nu-latn",
+    options
+  );
   return formatter.format(date);
 }
 
