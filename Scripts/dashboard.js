@@ -424,6 +424,20 @@ function openOrder(order) {
   );
 }
 
+function shamsiDate(time) {
+  console.log(time.slice(11, 19));
+  const date = new Date(time);
+  const options = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    calendar: "persian",
+  };
+
+  const formatter = new Intl.DateTimeFormat("fa-IR-u-ca-persian", options);
+  return formatter.format(date);
+}
+
 window.addEventListener("click", (e) => {
   if (
     e.target.className !== "menu" &&
