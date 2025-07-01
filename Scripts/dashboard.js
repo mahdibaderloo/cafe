@@ -410,8 +410,8 @@ function openOrder(order) {
   orderMobile.innerHTML = order[0].mobile;
   orderTotalPrice.innerHTML = order[0].total_price.toLocaleString();
 
-  orderData.innerHTML = shamsiDate(order[0].created_at);
-  orderTime.innerHTML = order[0].created_at.slice(11, 19);
+  orderData.innerHTML = toIranDate(order[0].created_at);
+  orderTime.innerHTML = toIranTime(order[0].created_at).slice(11, 20);
 
   orderData.innerHTML = "";
   JSON.parse(order[0].order).map((item) =>
@@ -426,7 +426,7 @@ function openOrder(order) {
   );
 }
 
-function shamsiDate(time) {
+function toIranDate(time) {
   const date = new Date(time);
   const options = {
     year: "numeric",
@@ -439,6 +439,30 @@ function shamsiDate(time) {
     options
   );
   return formatter.format(date);
+}
+
+function toIranTime(utcString) {
+  const clean = utcString.replace(/(\.\d{3})\d+/, "$1");
+
+  const date = new Date(clean);
+
+  if (isNaN(date)) {
+    console.error("Invalid Date:", clean);
+    return "Invalid Date";
+  }
+
+  const iranTime = date.toLocaleString("fa-IR", {
+    timeZone: "Asia/Tehran",
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+
+  return iranTime;
 }
 
 window.addEventListener("click", (e) => {
