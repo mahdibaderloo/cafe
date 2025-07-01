@@ -370,7 +370,6 @@ window.addEventListener("load", (event) => {
 
   if (products.textContent === "" || productsContent.length === 0) {
     orderButtonBox.style.display = "none";
-    console.log(products);
   }
 
   let localItems = getItemsInLocalStorage();

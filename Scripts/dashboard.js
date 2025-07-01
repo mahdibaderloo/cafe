@@ -1,6 +1,6 @@
 import { editAdminData, getAdmin } from "./apiAdmins.js";
 import { getItems, updateItem } from "./apiItems.js";
-import { getOrders } from "./apiOrders.js";
+import { getOrder, getOrders } from "./apiOrders.js";
 
 const items = [];
 
@@ -366,10 +366,11 @@ async function loadOrders() {
   await apiOrders.forEach((order) => {
     orders.insertAdjacentHTML(
       "afterbegin",
-      `         <tr>
+      `         <tr onclick={showOrder("${order.id}")} class="orders-item">
                   <td>${order.id}</td>
                   <td>${order.username}</td>
-                  <td>${order.total_price}</td>
+                  <td>${order.total_price.toLocaleString()}</td>
+                  <td>${order.mobile === null ? "---" : `0${order.mobile}`}</td>
                 </tr>
               `
     );
@@ -379,6 +380,15 @@ async function loadOrders() {
 ordersButton.addEventListener("click", () => {
   loadOrders();
 });
+
+async function showOrder(id) {
+  const getOrderApi = await getOrder(id);
+  const orderItems = JSON.parse(getOrderApi[0].order);
+
+  orderItems.map((item) => {
+    console.log(item);
+  });
+}
 
 window.addEventListener("click", (e) => {
   if (
@@ -406,3 +416,4 @@ window.backToCategories = backToCategories;
 window.editProduct = editProduct;
 window.closePopup = closePopup;
 window.deleteProduct = deleteProduct;
+window.showOrder = showOrder;

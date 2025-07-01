@@ -56,3 +56,13 @@ export async function getOrders() {
 
   return data;
 }
+
+export async function getOrder(id) {
+  let { data, error } = await supabase.from("orders").select("*").eq("id", id);
+
+  if (error) {
+    throw new Error("Order could not be loaded");
+  }
+
+  return data;
+}
