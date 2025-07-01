@@ -49,6 +49,11 @@ const profileImageInput = document.querySelector(".profile-image-input");
 const orders = document.querySelector(".orders");
 const orderPopupSection = document.querySelector(".order-popup-section");
 const ordersButton = document.getElementById("orders-btn");
+const orderId = document.querySelector(".order-id");
+const orderUsername = document.querySelector(".user-information-name");
+const orderMobile = document.querySelector(".user-information-mobile");
+const orderData = document.querySelector(".order-data");
+const orderTotalPrice = document.querySelector(".order-total-price");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -384,12 +389,11 @@ ordersButton.addEventListener("click", () => {
 });
 
 async function showOrder(id) {
-  const getOrderApi = await getOrder(id);
-  const orderItems = JSON.parse(getOrderApi[0].order);
-  openOrder(getOrderApi);
+  const order = await getOrder(id);
+  openOrder(order);
 }
 
-function openOrder(item) {
+function openOrder(order) {
   orderPopupSection.style.display = "flex";
   container.style.filter = "blur(10px)";
   container.style.pointerEvents = "none";
@@ -398,6 +402,26 @@ function openOrder(item) {
     let leftPos = container.offsetLeft + 100;
     profilePopupSection.style.left = `${leftPos}px`;
   }
+
+  orderId.innerHTML = order[0].id;
+  orderUsername.innerHTML = order[0].username;
+  orderMobile.innerHTML = order[0].mobile;
+  orderTotalPrice.innerHTML = order[0].total_price.toLocaleString();
+
+  let time = shamsiDate(order[0].created_at);
+  console.log(time);
+
+  orderData.innerHTML = "";
+  JSON.parse(order[0].order).map((item) =>
+    orderData.insertAdjacentHTML(
+      "beforeend",
+      `<tr>
+          <td>${item.product}</td>
+          <td>${item.price.toLocaleString()}</td>
+          <td>${item.count}</td>
+      </tr>`
+    )
+  );
 }
 
 window.addEventListener("click", (e) => {

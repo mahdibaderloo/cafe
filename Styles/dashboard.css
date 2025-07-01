@@ -782,23 +782,22 @@ textarea {
   margin-top: 2rem;
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid black;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 0 2px rgb(0, 0, 0);
+  border: 2px solid black;
 }
 
 .order-titles {
 }
 
 .order-titles th {
-  padding: 4px;
+  padding: 8px;
   border: 1px solid black;
+  border-bottom: 2px solid black;
   text-align: start;
+  font-weight: bold;
 }
 
 .order-data td {
-  padding: 4px;
+  padding: 6px;
   border: 1px solid black;
   text-align: start;
 }
