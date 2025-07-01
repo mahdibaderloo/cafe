@@ -712,3 +712,107 @@ textarea {
 .orders-item tr:nth-child(even) {
   background-color: #3f27013f;
 }
+
+.order-popup-section {
+  display: none;
+  height: 520px;
+  background-color: var(--main-color);
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--coffee-color);
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 90%;
+  /* height: 500px; */
+  padding: 14px;
+  padding-top: 1rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 5px #747474;
+  border-radius: 20px;
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  transform: translate(50%);
+  z-index: 50;
+}
+
+.order-id-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-id {
+}
+
+.user-information {
+  margin-top: 2rem;
+}
+
+.user-information-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-information > div {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  gap: 2rem;
+  padding-right: 10px;
+}
+
+.user-information > div > div {
+  display: flex;
+  gap: 6px;
+}
+
+.user-information > div > div p {
+  font-weight: bold;
+}
+
+.user-information-name {
+}
+
+.user-information-mobile {
+}
+
+.order-table {
+  margin-top: 2rem;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.order-titles {
+}
+
+.order-titles th {
+  padding: 4px;
+  border: 1px solid black;
+  text-align: start;
+}
+
+.order-data td {
+  padding: 4px;
+  border: 1px solid black;
+  text-align: start;
+}
+
+.order-total-price-box {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-total-price-box p {
+  font-weight: bold;
+}
+
+.order-total-price {
+}

@@ -47,6 +47,7 @@ const profileEmailInput = document.querySelector(".profile-email-input");
 const profilePasswordInput = document.querySelector(".profile-password-input");
 const profileImageInput = document.querySelector(".profile-image-input");
 const orders = document.querySelector(".orders");
+const orderPopupSection = document.querySelector(".order-popup-section");
 const ordersButton = document.getElementById("orders-btn");
 
 menuIcon.addEventListener("click", () => {
@@ -296,6 +297,7 @@ popupImageInput.addEventListener("change", function () {
 function closePopup() {
   popupSection.style.display = "none";
   profilePopupSection.style.display = "none";
+  orderPopupSection.style.display = "none";
   container.style.filter = "blur(0px)";
   container.style.pointerEvents = "unset";
 }
@@ -384,10 +386,18 @@ ordersButton.addEventListener("click", () => {
 async function showOrder(id) {
   const getOrderApi = await getOrder(id);
   const orderItems = JSON.parse(getOrderApi[0].order);
+  openOrder(getOrderApi);
+}
 
-  orderItems.map((item) => {
-    console.log(item);
-  });
+function openOrder(item) {
+  orderPopupSection.style.display = "flex";
+  container.style.filter = "blur(10px)";
+  container.style.pointerEvents = "none";
+
+  if (window.innerWidth > 1023) {
+    let leftPos = container.offsetLeft + 100;
+    profilePopupSection.style.left = `${leftPos}px`;
+  }
 }
 
 window.addEventListener("click", (e) => {

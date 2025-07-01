@@ -266,53 +266,6 @@
           </table>
         </section>
 
-        <!-- Order Popup -->
-        <section class="profile-popup-section">
-          <div class="popup-header">
-            <p class="popup-header-title">سفارش</p>
-            <img
-              src="Images/close.svg"
-              alt="icon"
-              class="close-icon"
-              onclick="closePopup()"
-            />
-          </div>
-
-          <div>
-            <p>کد سفارش:</p>
-            <span>#</span>
-          </div>
-
-          <div>
-            <p>اطلاعات مشتری</p>
-            <div>
-              <div>
-                <p>نام</p>
-                <span>مشتری</span>
-              </div>
-              <div>
-                <p>شماره تماس</p>
-                <span>0900000000</span>
-              </div>
-            </div>
-          </div>
-
-          <table>
-            <thead>
-              <tr>
-                <th>محصول</th>
-                <th>قیمت</th>
-                <th>تعداد</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <div>
-            <p>جمع قیمت</p>
-            <span>220,000</span>
-          </div>
-        </section>
-
         <!-- Profile Section -->
         <section class="profile-section">
           <div class="profile-img-box">
@@ -444,6 +397,51 @@
         </div>
         <button class="submit-profile">تایید</button>
       </form>
+    </section>
+
+    <!-- Order Popup -->
+    <section class="order-popup-section">
+      <div class="popup-header">
+        <div class="order-id-box">
+          <p class="popup-header-title">سفارش</p>
+          <span class="order-id">#0958903589hj9435</span>
+        </div>
+        <img
+          src="Images/close.svg"
+          alt="icon"
+          class="close-icon"
+          onclick="closePopup()"
+        />
+      </div>
+
+      <div class="user-information">
+        <p class="user-information-title">اطلاعات مشتری :</p>
+        <div>
+          <div>
+            <p>نام :</p>
+            <span class="user-information-name">مشتری</span>
+          </div>
+          <div>
+            <p>شماره تماس :</p>
+            <span class="user-information-mobile">0900000000</span>
+          </div>
+        </div>
+      </div>
+
+      <table class="order-table">
+        <thead>
+          <tr class="order-titles">
+            <th>محصول</th>
+            <th>قیمت</th>
+            <th>تعداد</th>
+          </tr>
+        </thead>
+        <tbody class="order-data"></tbody>
+      </table>
+      <div class="order-total-price-box">
+        <p>جمع قیمت :</p>
+        <span class="order-total-price">220,000</span>
+      </div>
     </section>
 
     <!-- Scripts -->

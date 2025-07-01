@@ -256,8 +256,12 @@
   tr {
     padding: 10px;
   }
-  .order-item {
+  .orders-item {
     cursor: pointer;
+  }
+  .order-popup-section {
+    width: 700px;
+    right: 60%;
   }
 }
 
