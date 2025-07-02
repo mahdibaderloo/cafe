@@ -46,6 +46,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .login-btn {
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 1280px) {

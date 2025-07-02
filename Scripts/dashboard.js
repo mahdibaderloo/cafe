@@ -407,7 +407,7 @@ function openOrder(order) {
 
   orderId.innerHTML = order[0].id;
   orderUsername.innerHTML = order[0].username;
-  orderMobile.innerHTML = order[0].mobile;
+  orderMobile.innerHTML = order[0].mobile === null ? "---" : order[0].mobile;
   orderTotalPrice.innerHTML = order[0].total_price.toLocaleString();
 
   orderData.innerHTML = toIranDate(order[0].created_at);

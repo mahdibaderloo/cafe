@@ -55,3 +55,12 @@ export async function editAdminData(adminData) {
   console.log("Update success:", data);
   return data;
 }
+
+export async function logout() {
+  const { error } = await supabase.auth.signOut();
+
+  if (error) {
+    console.error("Logout error:", error);
+    throw new Error(error.message);
+  }
+}
