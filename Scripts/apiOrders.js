@@ -1,48 +1,32 @@
 import supabase from "./supabase.js";
+import { toast } from "./toast.js";
 
-export async function addOrder(order, totalPrice, username) {
+export async function addOrder(
+  order,
+  totalPrice,
+  username,
+  mobile,
+  isTakeaway
+) {
   const { data, error } = await supabase
     .from("orders")
-    .insert([{ order, total_price: totalPrice, username }])
+    .insert([
+      {
+        order,
+        total_price: totalPrice,
+        username,
+        mobile,
+        is_takeaway: isTakeaway,
+      },
+    ])
     .select();
 
   if (error) {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 1500,
-      timerProgressBar: true,
-      color: "#351f08",
-      background: "#fff",
-      width: "80%",
-      fontSize: 16,
-    });
-    Toast.fire({
-      icon: "error",
-      title: "خطا در ثبت سفارش",
-      iconColor: "#351f08",
-    });
-
+    toast("خطا در ثبت سفارش", "error");
+    console.log(error);
     return null;
   } else {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 1500,
-      timerProgressBar: true,
-      color: "#351f08",
-      background: "#fff",
-      width: "80%",
-      fontSize: 16,
-    });
-    Toast.fire({
-      icon: "success",
-      title: "سفارش شما ثبت شد",
-      iconColor: "#351f08",
-    });
-
+    toast("سفارش شما ثبت شد", "success");
     return data;
   }
 }

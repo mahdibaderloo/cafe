@@ -555,8 +555,6 @@ body {
   border-radius: 10px;
   display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
   box-shadow: 0 0 4px #351f0854;
   z-index: 50;
@@ -567,8 +565,9 @@ body {
   font-size: 18px;
 }
 
-.username-input {
-  width: 80%;
+.username-input,
+.mobile-input {
+  width: 100%;
   border: 2px solid var(--coffee-color);
   outline: none;
   border-radius: 7px;
@@ -577,6 +576,17 @@ body {
   font-family: var(--font);
   font-size: 16px;
   text-align: center;
+}
+
+.takeaway-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.takeaway-checkbox {
+  accent-color: var(--coffee-color);
 }
 
 .submit-buttons {
@@ -589,7 +599,7 @@ body {
 
 .cancel-order,
 .submit-order {
-  width: 35%;
+  width: 40%;
   height: 40px;
   font-family: var(--font);
   font-size: 16px;

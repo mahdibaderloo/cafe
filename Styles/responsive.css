@@ -309,6 +309,14 @@
   .copy-right {
     font-size: 24px;
   }
+  .cancel-order,
+  .submit-order {
+    cursor: pointer;
+  }
+  .takeaway-box label,
+  .takeaway-checkbox {
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 1280px) {

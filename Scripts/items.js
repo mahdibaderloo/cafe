@@ -17,6 +17,8 @@ const orderButtonBox = document.querySelector(".order_btn_box");
 const orderButton = document.querySelector(".order_btn");
 const submitOrderForm = document.querySelector(".submit-order-form");
 const usernameInput = document.querySelector(".username-input");
+const mobileInput = document.querySelector(".mobile-input");
+const takeawayCheckbox = document.querySelector(".takeaway-checkbox");
 const bgBlur = document.querySelector(".bg-blur");
 const submitOrder = document.querySelector(".submit-order");
 const cancelOrder = document.querySelector(".cancel-order");
@@ -321,10 +323,13 @@ submitOrder.addEventListener("click", async (e) => {
   if (usernameInput.value.trim() !== "") {
     const order = getItemsInLocalStorage();
     const total = totalPrice.textContent;
+
     const response = await addOrder(
       JSON.stringify(order),
       Number(total.replaceAll(",", "")),
-      usernameInput.value
+      usernameInput.value.trim(),
+      mobileInput.value.trim(),
+      takeawayCheckbox.checked
     );
 
     if (response) {
