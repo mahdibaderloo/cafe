@@ -22,7 +22,7 @@ const CategoriesSection = document.querySelector(".categories-section");
 const ordersSection = document.querySelector(".orders-section");
 const profileSection = document.querySelector(".profile-section");
 const categories = document.querySelectorAll(".category");
-const ProductsSection = document.querySelector(".products-section");
+const productsSection = document.querySelector(".products-section");
 const ProductsWrapper = document.querySelector(".products");
 const linesSection = document.querySelector(".lines-section");
 const lines = document.querySelectorAll(".line-link");
@@ -100,33 +100,54 @@ function navigateTo(route) {
       CategoriesSection.style.display = "none";
       ordersSection.style.display = "none";
       profileSection.style.display = "none";
+      productsSection.style.display = "none";
+
+      closePopup();
+
       headerTitle.innerHTML = "داشبورد";
       break;
     case "#/products":
-      dashboardSection.style.display = "none";
       CategoriesSection.style.display = "flex";
+      productsSection.style.display = "none";
+      dashboardSection.style.display = "none";
       ordersSection.style.display = "none";
       profileSection.style.display = "none";
+
+      closePopup();
+
       headerTitle.innerHTML = "محصولات";
       break;
     case "#/orders":
+      ordersSection.style.display = "flex";
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "none";
-      ordersSection.style.display = "flex";
       profileSection.style.display = "none";
+      productsSection.style.display = "none";
+
+      closePopup();
+
       headerTitle.innerHTML = "سفارشات";
       break;
     case "#/profile":
+      profileSection.style.display = "flex";
       dashboardSection.style.display = "none";
       CategoriesSection.style.display = "none";
-      profileSection.style.display = "flex";
       ordersSection.style.display = "none";
+      productsSection.style.display = "none";
+
+      closePopup();
+
       headerTitle.innerHTML = "پروفایل";
       break;
     default:
       dashboardSection.style.display = "flex";
       CategoriesSection.style.display = "none";
       profileSection.style.display = "none";
+      ordersSection.style.display = "none";
+      productsSection.style.display = "none";
+
+      closePopup();
+
       headerTitle.innerHTML = "داشبورد";
   }
 }
@@ -229,7 +250,7 @@ function selectTeaGlass() {
 }
 
 function generateItems(data) {
-  ProductsSection.style.display = "block";
+  productsSection.style.display = "block";
   ProductsWrapper.innerHTML = "";
 
   let selectedItems = items.filter((item) => item.category === data);
@@ -252,7 +273,7 @@ function generateItems(data) {
 }
 
 function backToCategories() {
-  ProductsSection.style.display = "none";
+  productsSection.style.display = "none";
   CategoriesSection.style.display = "flex";
 }
 
