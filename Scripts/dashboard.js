@@ -56,6 +56,7 @@ const orderTotalPrice = document.querySelector(".order-total-price");
 const orderId = document.querySelector(".order-information-id");
 const orderDate = document.querySelector(".order-information-date");
 const orderTime = document.querySelector(".order-information-time");
+const logoutBtn = document.querySelector(".logout");
 
 menuIcon.addEventListener("click", () => {
   menu.style.right = "0";
@@ -410,8 +411,8 @@ function openOrder(order) {
   orderMobile.innerHTML = order[0].mobile === null ? "---" : order[0].mobile;
   orderTotalPrice.innerHTML = order[0].total_price.toLocaleString();
 
-  orderData.innerHTML = toIranDate(order[0].created_at);
-  orderTime.innerHTML = toIranTime(order[0].created_at).slice(11, 20);
+  orderDate.innerHTML = toIranDate(order[0].created_at);
+  orderTime.innerHTML = toIranTime(order[0].created_at);
 
   orderData.innerHTML = "";
   JSON.parse(order[0].order).map((item) =>
@@ -441,28 +442,23 @@ function toIranDate(time) {
   return formatter.format(date);
 }
 
-function toIranTime(utcString) {
-  const clean = utcString.replace(/(\.\d{3})\d+/, "$1");
-
-  const date = new Date(clean);
+function toIranTime(time) {
+  const date = new Date(time);
 
   if (isNaN(date)) {
-    console.error("Invalid Date:", clean);
+    console.error("Invalid Date:", time);
     return "Invalid Date";
   }
 
   const iranTime = date.toLocaleString("fa-IR", {
     timeZone: "Asia/Tehran",
     hour12: false,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
   });
 
-  return iranTime;
+  return iranTime.replace(/[\u06F0-\u06F9]/g, (d) => d.charCodeAt(0) - 0x06f0);
 }
 
 window.addEventListener("click", (e) => {
