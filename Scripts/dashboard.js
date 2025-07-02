@@ -80,6 +80,16 @@ menuItem.forEach((item) => {
         route = "#/profile";
         break;
     }
+
+    const token = localStorage.getItem("sb-dacwjlvyeeanbbkusbte-auth-token");
+    if (!token) {
+      toast("لطفاً ابتدا وارد حساب کاربری شوید.", "error");
+      window.location.href = "/";
+      return;
+    }
+
+    location.hash = route;
+    navigateTo(route);
   });
 });
 

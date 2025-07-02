@@ -1,4 +1,5 @@
 import { isValidAdmin } from "./apiAdmins.js";
+import { toast } from "./toast.js";
 
 const loginBtn = document.querySelector(".login-btn");
 let emailInput = document.querySelector(".email-input");
@@ -12,9 +13,10 @@ loginBtn.addEventListener("click", (e) => {
 
   isValidAdmin(emailInputValue, passwordInputValue).then((data) => {
     if (data) {
+      toast("ورود موفق", "success");
       login();
     } else {
-      alert("ایمیل یا پسورد اشتباه وارد شده :(");
+      toast("ایمیل یا پسورد اشتباه وارد شده :(", "error");
     }
   });
 });
