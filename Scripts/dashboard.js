@@ -1,6 +1,7 @@
-import { editAdminData, getAdmin } from "./apiAdmins.js";
+import { editAdminData, getAdmin, logout } from "./apiAdmins.js";
 import { getItems, updateItem } from "./apiItems.js";
 import { getOrder, getOrders } from "./apiOrders.js";
+import { toast } from "./toast.js";
 
 const items = [];
 
@@ -79,8 +80,6 @@ menuItem.forEach((item) => {
         route = "#/profile";
         break;
     }
-    location.hash = route;
-    navigateTo(route);
   });
 });
 
@@ -460,6 +459,12 @@ function toIranTime(time) {
 
   return iranTime.replace(/[\u06F0-\u06F9]/g, (d) => d.charCodeAt(0) - 0x06f0);
 }
+
+logoutBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  await logout();
+  window.location.href = "/";
+});
 
 window.addEventListener("click", (e) => {
   if (

@@ -1,5 +1,6 @@
 import { getItems } from "./apiItems.js";
 import { addOrder } from "./apiOrders.js";
+import { toast } from "./toast.js";
 
 const items = [];
 
@@ -183,22 +184,7 @@ function updateProductsArray(id) {
   if (!productsContent.find((item) => item.id === id)) {
     productsContent.push({ ...selectedItem[0], count: 1 });
 
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 1500,
-      timerProgressBar: true,
-      color: "#351f08",
-      background: "#fff",
-      width: "80%",
-      fontSize: 16,
-    });
-    Toast.fire({
-      icon: "success",
-      title: `${selectedItem[0].product} به سبد خرید اضافه شد`,
-      iconColor: "#351f08",
-    });
+    toast(`${selectedItem[0].product} به سبد خرید اضافه شد`, "success");
   }
   setItemsInLocalStorage(productsContent);
   addToCart(productsContent);
